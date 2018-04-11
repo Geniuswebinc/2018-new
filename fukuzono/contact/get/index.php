@@ -17,26 +17,26 @@
     </div>
   </div>
 
-  <form>
+  <form action="confirm.php" method="get">
     <div class="container form-group">
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
           <label for="use_name">名前</label>
-          <input type="user_name" class="form-control">
+          <input type="user_name" name="name" class="form-control">
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
           <label for="InputEmail">メールアドレス</label>
-		      <input type="email" class="form-control" id="InputEmail">
+		      <input type="email" name="email" class="form-control" id="InputEmail">
         </div>
       </div>
 
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
 		      <label for="InputTextarea">内容</label>
-		      <textarea class="form-control" id="InputTextarea"></textarea>
+		      <textarea class="form-control" name="content" id="InputTextarea"></textarea>
 	      </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
         <button type="submit" class="btn btn-primary btn-lg btn-success">確認</button>
       </div>
     </div>
-  </div>
+  </form>
 
 
 

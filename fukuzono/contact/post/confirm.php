@@ -1,3 +1,13 @@
+<?php
+$name=$_GET['name'];
+?>
+<?php
+$email=$_GET['email'];
+?>
+<?php
+$content=$_GET['content'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,28 +32,28 @@
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
 		      <label class="control-label">名前</label>
-			    <p class="form-control-static">◯◯　◯◯</p>
+			    <p class="form-control-static"><?php echo $name; ?></p>
         </div>
       </div>
 
 	    <div class="row">
 		    <div class="col-xs-offset-1 col-xs-10">
           <label class="control-label">メールアドレス</label>
-			    <p class="form-control-static">mail@example.jp</p>
+			    <p class="form-control-static"><?php echo $email; ?></p>
 		    </div>
       </div>
 
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
 		      <label class="control-label">内容</label>
-			    <p class="form-control-static">内容入ります</p>
+			    <p class="form-control-static"><?php echo $content; ?></p>
 		    </div>
 	    </div>
 
 
 	    <div class="form-group">
        <div class="row">
-         <div class="col-xs-offset-2 col-xs-4">
+         <div class="col-xs-offset-2 col-xs-4 col-sm-6">
            <button type="button" class="btn btn-default btn-lg">戻る</button>
          </div>
 

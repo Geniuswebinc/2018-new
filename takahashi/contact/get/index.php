@@ -57,7 +57,7 @@
 
       <div class="row">
         <div class="col-xs-12 text-center">
-          <input type="submit" value="送信" class="inputBtn" >
+          <input type="submit" value="送信" class="inputBtn">
         </div>
       </div>
 

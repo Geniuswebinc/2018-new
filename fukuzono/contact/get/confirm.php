@@ -29,7 +29,7 @@ $content=$_GET['content'];
     </div>
   </div>
 
-  <form>
+  <form action="thanks.php" method="get">
     <div class="container form-group">
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
@@ -56,11 +56,11 @@ $content=$_GET['content'];
 	    <div class="form-group">
        <div class="row">
          <div class="col-xs-offset-2 col-xs-4 col-sm-6">
-           <button type="button" class="btn btn-default btn-lg">戻る</button>
+           <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
          </div>
 
          <div class="col-xs-4">
-           <button type="submit" name="send" class="btn btn-primary btn-lg btn-success">送信</button>
+           <button type="submit" class="btn btn-primary btn-lg btn-success">送信</button>
          </div>
        </div>
 	   </div>

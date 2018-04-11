@@ -1,3 +1,7 @@
+<?php $name1=$_GET['nameData']; echo $name1 ?>
+<?php $name2=$_GET['mailData']; echo $name2 ?>
+<?php $name2=$_GET['textData']; echo $name3 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

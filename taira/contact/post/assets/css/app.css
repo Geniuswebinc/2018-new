@@ -1,0 +1,28 @@
+/*
+index.php
+*/
+.text-center h1{
+  vertical-align: middle;
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+label{
+  vertical-align: middle;
+  font-size: 20px;
+  padding-top:20px;
+}
+/*
+confirm.html
+*/
+.label-all{
+  vertical-align: middle;
+  font-size: 25px;
+}
+/*
+thanks.php
+*/
+.text-center p{
+  vertical-align: middle;
+  font-size: 25px;
+  padding: 150px 0;
+}

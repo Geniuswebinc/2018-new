@@ -3,7 +3,7 @@ $name=$_GET['sentname'];
 $mail=$_GET['sentmail'];
 $msg=$_GET['sentmsg'];
 ?>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -20,9 +20,6 @@ $msg=$_GET['sentmsg'];
   </head>
 
   <body>
-
-
-
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-center topmsg">

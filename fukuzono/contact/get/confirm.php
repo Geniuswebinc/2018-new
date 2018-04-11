@@ -60,7 +60,7 @@ $content=$_GET['content'];
          </div>
 
          <div class="col-xs-4">
-           <button type="submit" class="btn btn-primary btn-lg btn-success">送信</button>
+           <button type="submit" name="send" class="btn btn-primary btn-lg btn-success">送信</button>
          </div>
        </div>
 	   </div>

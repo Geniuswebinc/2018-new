@@ -1,9 +1,3 @@
-<?php
-session_cache_limiter('public');
-session_start();
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>

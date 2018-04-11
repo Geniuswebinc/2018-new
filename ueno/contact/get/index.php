@@ -60,7 +60,7 @@
     <p>
       内容
     </p>
-		<textarea   class="form-control"  id="InputTextarea" placeholder=""></textarea>
+		<textarea name="textData"  class="form-control"  id="InputTextarea" placeholder=""></textarea>
       </div>
     </div>
   </div>

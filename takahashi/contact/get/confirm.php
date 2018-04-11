@@ -1,3 +1,8 @@
+<?php
+$name=$_GET['sentname'];
+$mail=$_GET['sentmail'];
+$msg=$_GET['sentmsg'];
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -27,7 +32,7 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textName">
             <p>名前</p>
-            <p>〇〇　〇〇</p>
+            <p><?php echo $name; ?></p>
           </div>
         </div>
       </div>
@@ -36,7 +41,7 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textMail">
             <p>メールアドレス</p>
-            <p>mail@example.jp</p>
+            <p><?php echo $mail;?></p>
           </div>
         </div>
       </div>
@@ -45,7 +50,7 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textTextarea">
             <p>内容</p>
-            <p>お問い合わせ内容がはいります。<br>入ります。</p>
+            <p><?php echo $msg;?></p>
           </div>
         </div>
       </div>

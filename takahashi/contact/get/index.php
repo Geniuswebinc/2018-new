@@ -23,31 +23,34 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-xs-offset-4 col-xs-4">
-          <div class="form-group">
-            <label for="InputEmail">名前</label>
-            <input type="text" class="form-control">
-	        </div>
-        </div>
+
+      <form action="confirm.php" method="get">
+
+        <div class="row">
+          <div class="col-xs-offset-4 col-xs-4">
+            <div class="form-group">
+              <label for="InputEmail">名前</label>
+              <input type="text" class="form-control" name="sentname">
+	           </div>
+           </div>
 
 
-        <div class="col-xs-offset-4 col-xs-4">
-          <div class="form-group">
-		          <label for="Inputmail">メールアドレス</label>
-		          <input type="text" class="form-control">
-	        </div>
-        </div>
+           <div class="col-xs-offset-4 col-xs-4">
+             <div class="form-group">
+		             <label for="Inputmail">メールアドレス</label>
+		             <input type="text" class="form-control" name="sentmail">
+	            </div>
+            </div>
 
 
 
-        <div class="col-xs-offset-4 col-xs-4">
-	        <div class="form-group">
-		          <label for="InputTextarea">内容</label>
-		          <textarea class="form-control"></textarea>
-	        </div>
-        </div>
-      </div>
+            <div class="col-xs-offset-4 col-xs-4">
+	             <div class="form-group">
+		               <label for="InputTextarea">内容</label>
+		               <textarea class="form-control" name="sentmsg"></textarea>
+	              </div>
+            </div>
+          </div>
 
       </div>
 
@@ -56,8 +59,9 @@
         <div class="col-xs-12 text-center">
           <input type="submit" value="送信" class="inputBtn">
         </div>
-
       </div>
+
+      </form>
 
       </div>
 

@@ -15,6 +15,9 @@
   </head>
 
   <body>
+
+
+
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-center topmsg">
@@ -27,7 +30,10 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textName">
             <p>名前</p>
-            <p>〇〇　〇〇</p>
+            <p><?php
+            $name=$_GET['sentname'];
+            echo $name;
+            ?></p>
           </div>
         </div>
       </div>
@@ -36,7 +42,10 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textMail">
             <p>メールアドレス</p>
-            <p>mail@example.jp</p>
+            <p><?php
+            $name=$_GET['sentmail'];
+            echo $name;
+            ?></p>
           </div>
         </div>
       </div>
@@ -45,7 +54,10 @@
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textTextarea">
             <p>内容</p>
-            <p>お問い合わせ内容がはいります。<br>入ります。</p>
+            <p><?php
+            $name=$_GET['sentmsg'];
+            echo $name;
+            ?></p>
           </div>
         </div>
       </div>

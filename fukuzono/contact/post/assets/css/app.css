@@ -1,0 +1,22 @@
+h1{
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.form-control{
+  margin-bottom: 20px;
+}
+
+.form-control-static{
+  margin-bottom: 20px;
+}
+
+.msg{
+  font-size: 12px;
+  margin-top: 60px;
+}
+
+.btn{
+  padding: 10px 40px;
+  margin-top: 70px;
+}

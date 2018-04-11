@@ -1,3 +1,10 @@
+<!-- フォームの内容を取得 -->
+<?php
+ $name = $_GET['name'];
+ $mail = $_GET['mail'];
+ $context = $_GET['context'];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,14 +22,17 @@
   <form class="text-center" action="thanks.php" method="get">
     <div>
       <label>名前</label><br>
+      <?php echo $name; ?>
     </div>
 
     <div>
       <label>メールアドレス</label><br>
+      <?php echo $mail; ?>
     </div>
 
     <div>
       <label>内容</label><br>
+      <?php echo $context; ?>
     </div>
 
     <div>

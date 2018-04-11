@@ -1,3 +1,9 @@
+<?php
+$name1=$_GET['nameData'];
+$name2=$_GET['mailData'];
+$name3=$_GET['textData'];
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +37,7 @@
     <p>
       名前
     </p>
+    <?php echo $name1; ?>
         </div>
       </div>
   </div>
@@ -42,6 +49,7 @@
     <p>
       メールアドレス
     </p>
+      <?php echo $name2; ?>
       </div>
     </div>
   </div>
@@ -53,6 +61,7 @@
     <p>
       内容
     </p>
+    <?php echo $name3; ?>
       </div>
     </div>
   </div>

@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <form>
+  <form method="get" action="confirm.php">
 
   <div class="container">
     <div class="row">
@@ -35,7 +35,7 @@
       名前
     </p>
 
-    <input type="text" class="form-control" placeholder="">
+    <input type="text" name="nameData" class="form-control" placeholder="">
 
       </div>
     </div>
@@ -48,7 +48,7 @@
     <p>
       メールアドレス
     </p>
-    <input type="text" class="form-control" placeholder="">
+    <input type="text" name="mailData" class="form-control" placeholder="">
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
     <p>
       内容
     </p>
-		<textarea class="form-control" id="InputTextarea" placeholder=""></textarea>
+		<textarea name="textData"  class="form-control"  id="InputTextarea" placeholder=""></textarea>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@
   <div class="row">
     <div class="col-xs-12">
 
-<INPUT type="button" value="送信" class="btn btn-success"  onClick="location.href='confirm.php'">
+<INPUT type="submit" value="送信" class="btn btn-success">
 
         </div>
       </div>

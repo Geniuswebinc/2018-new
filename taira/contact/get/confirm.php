@@ -81,14 +81,14 @@ $InputTextarea=$_GET['InputTextarea'];
       <div class="row">
         <div class="col-xs-6">
           <div class="text-right">
-              <button type="button" class="btn btn-default btn-lg" onclick="history.back()">　　戻る　　</button>
+              <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
           </div>
       </div>
 
 
         <div class="col-xs-6">
             <div class="text-left">
-                <button type="submit" class="btn btn-success btn-lg" >　　送信　　</button>
+                <button type="submit" class="btn btn-success btn-lg" >送信</button>
           </div>
       </div>
     </div>

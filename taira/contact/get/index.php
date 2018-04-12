@@ -28,7 +28,7 @@
         <div class="col-xs-12">
           	<div class="form-group">
               <label for="InputName">名前</label>
-              <input type="text" name="name"class="form-control input-lg" id="InputName">
+              <input type="text" name="name" lass="form-control input-lg" id="InputName">
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@
         </div>
       </div>
     </div>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
   </form>
 
   </div>

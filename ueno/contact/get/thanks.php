@@ -28,9 +28,6 @@ $name4=$_GET['nameDate2'];
 </h1>
 
 <p>
-  <?php
-    echo $name4;
-  ?>
   　様お問い合せありがとうございました。
 </p>
     </div>

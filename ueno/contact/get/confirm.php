@@ -44,8 +44,6 @@ $name3=$_GET['textData'];
       名前
     </p>
     <?php echo $name1; ?>
-    <input type="hidden" name="nameDate2" value= <?php echo $name1; ?> >
-
         </div>
       </div>
   </div>

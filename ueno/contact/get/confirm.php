@@ -20,6 +20,9 @@ $name3=$_GET['textData'];
   <script type="text/javascript" src="./assets/js/app.js"></script>
 </head>
 <body>
+    <form method="get" action="thanks.php">
+
+
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -71,12 +74,13 @@ $name3=$_GET['textData'];
   <div class="row">
     <div class="col-xs-12">
 
-<INPUT type="button" value="戻る" onClick="location.href='index.php'">
-<INPUT type="button" value="送信" onClick="location.href='thanks.php'">
+        <input type="button" value="戻る" onclick="history.back()">
+
+        <input type="submit" value="送信" class="btn btn-success">
 
       </div>
     </div>
   </div>
-
+    </form>
 </body>
 </html>

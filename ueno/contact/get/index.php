@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,7 +72,7 @@
   <div class="row">
     <div class="col-xs-12">
 
-<INPUT type="submit" value="送信" class="btn btn-success">
+<input type="submit" value="送信" class="btn btn-success">
 
         </div>
       </div>

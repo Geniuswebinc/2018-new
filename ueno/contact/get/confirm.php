@@ -20,7 +20,7 @@ $name3=$_GET['textData'];
   <script type="text/javascript" src="./assets/js/app.js"></script>
 </head>
 <body>
-<form method="get" action="thanks.php">
+    <form method="get" action="thanks.php">
 
 
   <div class="container">
@@ -81,6 +81,6 @@ $name3=$_GET['textData'];
       </div>
     </div>
   </div>
-
+    </form>
 </body>
 </html>

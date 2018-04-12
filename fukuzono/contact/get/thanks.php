@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <form action="index.php" method="get">
   <div class="container text-center">
     <div class="row">
       <div class="col-xs-12">
@@ -21,10 +20,9 @@
 
   <div class="row">
     <div class="col-xs-12 text-center">
-      <button type="submit" class="btn btn-default btn-lg">TOPに戻る</button>
+      <a href="index.php"><button type="button" class="btn btn-default btn-lg">TOPに戻る</button></a>
     </div>
   </div>
-  </form>
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -37,7 +37,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="text-center">
-              <button type="submit" class="btn btn-default btn-lg">　TOPに戻る　</button>
+              <button type="submit" class="btn btn-default btn-lg">TOPに戻る</button>
           </div>
         </div>
       </div>

@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./assets/css/app.css">
-  <script type='text/javascript' src="./assets/js/app.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/app.css">
+  <script type='text/javascript' src="./assets/js/app.js"></script>
 </head>
 <body>
   <div class="container">
@@ -20,15 +20,14 @@
           <h1><strong>お問い合わせフォーム</strong></h1>
         </div>
       </div>
-    </div>
+   </div>
 
-
-    <form>
+    <form  action="confirm.php" method="post">
       <div class="row">
         <div class="col-xs-12">
           	<div class="form-group">
               <label for="InputName">名前</label>
-              <input type="text" class="form-control input-lg" id="InputName">
+              <input type="text" name="name" class="form-control input-lg" >
             </div>
           </div>
         </div>
@@ -38,7 +37,7 @@
           <div class="col-xs-12">
             <div class="form-group">
               <label for="InputEmail">メールアドレス</label>
-              <input type="text" class="form-control input-lg" id="InputEmail">
+              <input type="text" name="Email" class="form-control input-lg">
             </div>
           </div>
         </div>
@@ -48,11 +47,11 @@
           <div class="col-xs-12">
             <div class="form-group">
               <label for="InputTextarea">内容</label>
-              <textarea rows="5" class="form-control input-lg" id="InputTextarea" ></textarea>
+              <textarea rows="5" name="InputTextarea" class="form-control input-lg"></textarea>
             </div>
           </div>
         </div>
-    </form>
+
 
 
     <div class="row">
@@ -62,7 +61,7 @@
         </div>
       </div>
     </div>
-
+</form>
 
   </div>
 

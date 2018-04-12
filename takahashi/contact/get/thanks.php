@@ -32,7 +32,7 @@
 
       <div class="row">
           <div class="col-xs-12 text-center">
-            <input type="submit" value="TOPに戻る" class="backbtn">
+            <input type="button" onclick="location.href='index.php'"value="TOPに戻る"　class="backbtn">
           </div>
       </div>
     </div>

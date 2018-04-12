@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <form method="get" action="confirm.php">
+  <form method="post" action="confirm.php">
 
   <div class="container">
     <div class="row">
@@ -37,7 +37,6 @@
     </p>
 
     <input type="text" name="nameData" class="form-control" placeholder="">
-
       </div>
     </div>
   </div>

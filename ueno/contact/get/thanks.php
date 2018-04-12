@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,14 +18,21 @@
   <script type="text/javascript" src="./assets/js/app.js"></script>
 </head>
 <body>
+
+    <form method="post" action="" >
+
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <h1>
   お問合せ　完了
 </h1>
+
 <p>
-  お問い合せありがとうございました。
+  <?php
+   echo $_SESSION['ndate'];　
+  ?>
+  　様お問い合せありがとうございました。
 </p>
     </div>
   </div>
@@ -36,7 +47,7 @@
   <div class="row">
     <div class="col-xs-12">
 
-<INPUT type="button" value="トップページへ" onClick="location.href='index.php'">
+<input type="button" value="トップページへ" onClick="location.href='index.php'">
 
       </div>
     </div>
@@ -46,5 +57,6 @@
  <div class="sidebar">sidebar</div>
  <div class="content">content</div>
  <div class="footer">footer</div> -->
+</form>
 </body>
 </html>

@@ -20,41 +20,35 @@ $name4=$_POST['nameDate2'];
 <body>
 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h1>
-  お問合せ　完了
-</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>
+                    お問合せ　完了
+                </h1>
 
-<p>
-  <?php
-    echo $name4;
-  ?>
-  　様お問い合せありがとうございました。
-</p>
+                <p>
+                    <?php
+                    echo $name4;
+                    ?>
+  　                 様お問い合せありがとうございました。
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
 
 
 <!-- TOPへ戻るボタン -->
-<!-- <button type="submit" class="btn btn-default">TOPに戻る</button> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
+                <input type="button" value="トップページへ" onClick="location.href='index.php'">
 
-<input type="button" value="トップページへ" onClick="location.href='index.php'">
-
-      </div>
+            </div>
+        </div>
     </div>
-  </div>
- <!-- <div class="header">header</div>
- <div class="main-visual">main-visual</div>
- <div class="sidebar">sidebar</div>
- <div class="content">content</div>
- <div class="footer">footer</div> -->
+ 
 </body>
 </html>

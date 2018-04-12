@@ -1,11 +1,7 @@
 <?php
-$name=$_GET['name'];
-?>
-<?php
-$email=$_GET['email'];
-?>
-<?php
-$content=$_GET['content'];
+    $name=$_GET['name'];
+    $email=$_GET['email'];
+    $content=$_GET['content'];
 ?>
 
 
@@ -53,7 +49,6 @@ $content=$_GET['content'];
 	    </div>
 
 
-	    <div class="form-group">
        <div class="row">
          <div class="col-xs-offset-2 col-xs-4 col-sm-6">
            <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>

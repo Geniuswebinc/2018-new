@@ -1,11 +1,7 @@
 <?php
-$name=$_POST['name'];
-?>
-<?php
-$email=$_POST['email'];
-?>
-<?php
-$content=$_POST['content'];
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $content=$_POST['content'];
 ?>
 
 <!DOCTYPE html>
@@ -27,43 +23,41 @@ $content=$_POST['content'];
     </div>
   </div>
 
-  <form action="thanks.php" method="post">
-    <div class="container form-group">
-      <div class="row">
-        <div class="col-xs-offset-1 col-xs-10">
-		      <label class="control-label">名前</label>
-			    <p class="form-control-static"><?php echo $name; ?></p>
-          <input type="hidden" name="name" value="<?php echo $name; ?>">
+    <form action="thanks.php" method="post">
+        <div class="container form-group">
+            <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+                <label class="control-label">名前</label>
+                <p class="form-control-static"><?php echo $name; ?></p>
+                <input type="hidden" name="name" value="<?php echo $name; ?>">
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+                <label class="control-label">メールアドレス</label>
+                <p class="form-control-static"><?php echo $email; ?></p>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+                <label class="control-label">内容</label>
+                <p class="form-control-static"><?php echo $content; ?></p>
+            </div>
+            </div>
+
+            <div class="row">
+            <div class="col-xs-offset-2 col-xs-4 col-sm-6">
+                <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
+            </div>
+
+            <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-success">送信</button>
+            </div>
+            </div>
         </div>
-      </div>
-
-	    <div class="row">
-		    <div class="col-xs-offset-1 col-xs-10">
-          <label class="control-label">メールアドレス</label>
-			    <p class="form-control-static"><?php echo $email; ?></p>
-		    </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-offset-1 col-xs-10">
-		      <label class="control-label">内容</label>
-			    <p class="form-control-static"><?php echo $content; ?></p>
-		    </div>
-	    </div>
-
-
-	    <div class="form-group">
-       <div class="row">
-         <div class="col-xs-offset-2 col-xs-4 col-sm-6">
-           <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
-         </div>
-
-         <div class="col-xs-4">
-           <button type="submit" class="btn btn-primary btn-lg btn-success">送信</button>
-         </div>
-       </div>
-	   </div>
-  </form>
+    </form>
 
 <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

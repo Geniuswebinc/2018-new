@@ -21,6 +21,16 @@
             <p><?php echo $id; ?></p>
         </div>
 
+        <div class="text-center">
+            <label>問題2</label>
+
+            <?php if ($id >= 10): ?>
+                <p>10以上の値です</p>
+            <?php elseif ($id < 10): ?>
+                <p>9以下の値です</p>
+            <?php endif; ?>
+        </div>
+
     </section>
 
     <!-- Latest compiled and minified JavaScript -->

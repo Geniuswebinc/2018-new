@@ -35,6 +35,8 @@ $InputTextarea=$_GET['InputTextarea'];
         <p class="label-all">名前</p>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
         <?php
@@ -42,11 +44,15 @@ $InputTextarea=$_GET['InputTextarea'];
         ?>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
         <p class="label-all">メールアドレス</p>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
         <?php
@@ -54,11 +60,15 @@ $InputTextarea=$_GET['InputTextarea'];
         ?>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
         <p class="label-all">内容</p>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
         <?php
@@ -66,6 +76,8 @@ $InputTextarea=$_GET['InputTextarea'];
         ?>
       </div>
     </div>
+
+
     <div class="row">
       <div class="col-xs-6">
         <div class="text-right">
@@ -73,16 +85,16 @@ $InputTextarea=$_GET['InputTextarea'];
         </div>
       </div>
 
+
       <div class="col-xs-6">
         <div class="text-left">
           <button type="submit" class="btn btn-success btn-lg" >　　送信　　</button>
         </div>
       </div>
     </div>
+  </form>
+</div>
 
-
-  </div>
-</form>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

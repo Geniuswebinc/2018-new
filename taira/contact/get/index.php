@@ -17,36 +17,48 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="text-center">
-          <h1><strong>お問い合わせ　確認</strong></h1>
+          <h1><strong>お問い合わせフォーム</strong></h1>
         </div>
       </div>
     </div>
 
 
-        <div class="row">
-          <div class="col-xs-offset-2 col-xs-10">
-            <p class="label-all">名前</p>
+    <form>
+      <div class="row">
+        <div class="col-xs-12">
+          	<div class="form-group">
+              <label for="InputName">名前</label>
+              <input type="text" class="form-control input-lg" id="InputName">
+            </div>
           </div>
         </div>
 
 
         <div class="row">
-          <div class="col-xs-offset-2 col-xs-10">
-            <p><br ><br >◯◯　◯◯<br ><br ><br ><br ><br ></P>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="InputEmail">メールアドレス</label>
+              <input type="text" class="form-control input-lg" id="InputEmail">
+            </div>
           </div>
         </div>
 
 
         <div class="row">
-          <div class="col-xs-offset-2 col-xs-10">
-            <p class="label-all">メールアドレス</p>
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="InputTextarea">内容</label>
+              <textarea rows="5" class="form-control input-lg" id="InputTextarea" ></textarea>
+            </div>
           </div>
         </div>
+      </form>
 
+    <div class="row">
+      <div class="col-xs-offset-4 col-xs-4 col-xs-offset-4">
+          <button class="btn btn-success btn-lg">お問い合わせはこちら</button>
+                    </div>
 
-        <div class="row">
-          <div class="col-xs-offset-2 col-xs-10">
-            <p><br ><br >@example.jp<br ><br ><br ><br ><br ></P>
           </div>
         </div>
 

@@ -1,3 +1,8 @@
+<!-- 内容を取得 -->
+<?php
+    $name = $_POST['name'];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,7 +17,7 @@
     <section class="text-center">
         <h1>お問い合わせ　完了</h1>
 
-        <p>お問い合わせありがとうございました。</p>
+        <p><?php echo $name;?>さん、お問い合わせありがとうございました。</p>
 
         <a href="index.php" class="btn btn-default">TOPに戻る</a>
     </section>

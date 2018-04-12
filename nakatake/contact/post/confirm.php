@@ -1,3 +1,10 @@
+<!-- フォームの内容を取得 -->
+<?php
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $context = $_POST['context'];
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -12,22 +19,27 @@
     <section>
         <h1 class="text-center">お問い合わせ　確認</h1>
 
-        <form class="text-center" action="thanks.php" method="get">
+        <form class="text-center" action="thanks.php" method="post">
             <div>
                 <label>名前</label><br>
+                <?php echo $name; ?>
             </div>
 
             <div>
                 <label>メールアドレス</label><br>
+                <?php echo $mail; ?>
             </div>
 
             <div>
                 <label>内容</label><br>
+                <?php echo $context; ?>
             </div>
 
             <div>
                 <button type="button" onclick="history.back()" name="back" class="btn btn-default">戻る</button>
                 <button type="submit" name="submit" class="btn btn-success">送信</button>
+
+                <input name="name" type="hidden" value="<?php echo $name; ?>">
             </div>
         </form>
 

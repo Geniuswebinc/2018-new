@@ -12,7 +12,7 @@
     <section>
         <h1 class="text-center">お問い合わせフォーム</h1>
 
-        <form class="text-center" action="confirm.php" method="get">
+        <form class="text-center" action="confirm.php" method="post">
             <div>
                 <label>名前</label><br>
                 <input type="text" name="name">

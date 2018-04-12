@@ -36,7 +36,7 @@
 
             <?php if ($id >= 10): ?>
                 <p>10以上の値です</p>
-            <?php elseif ($id >= 1 & $id < 10): ?>
+            <?php elseif ($id >= 1 && $id < 10): ?>
                 <p>9以下の値です</p>
             <?php elseif ($id < 1): ?>
                 <p>無効の値です</p>

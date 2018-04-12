@@ -1,5 +1,5 @@
 <?php
-session_start();
+$name4=$_POST['nameDate2'];
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,6 @@ session_start();
 </head>
 <body>
 
-    <form method="post" action="" >
 
   <div class="container">
     <div class="row">
@@ -30,8 +29,7 @@ session_start();
 
 <p>
   <?php
-   echo $_SESSION['ndate'];
-   unset($_SESSION['ndate']);
+    echo $name4;
   ?>
   　様お問い合せありがとうございました。
 </p>
@@ -58,6 +56,5 @@ session_start();
  <div class="sidebar">sidebar</div>
  <div class="content">content</div>
  <div class="footer">footer</div> -->
-</form>
 </body>
 </html>

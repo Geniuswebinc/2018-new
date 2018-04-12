@@ -3,8 +3,8 @@ $name1=$_POST['nameData'];
 $name2=$_POST['mailData'];
 $name3=$_POST['textData'];
 
-session_start();
-$_SESSION['ndate']=$name1;
+// session_start();
+// $_SESSION['ndate']=$name1;
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +44,8 @@ $_SESSION['ndate']=$name1;
       名前
     </p>
     <?php echo $name1; ?>
+    <input type="hidden" name="nameDate2" value= <?php echo $name1; ?> >
+
         </div>
       </div>
   </div>

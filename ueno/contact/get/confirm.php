@@ -2,6 +2,9 @@
 $name1=$_GET['nameData'];
 $name2=$_GET['mailData'];
 $name3=$_GET['textData'];
+
+// session_start();
+// $_SESSION['ndate']=$name1;
 ?>
 
 <!DOCTYPE html>

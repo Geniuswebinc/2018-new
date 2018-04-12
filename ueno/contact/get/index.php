@@ -37,7 +37,6 @@
     </p>
 
     <input type="text" name="nameData" class="form-control" placeholder="">
-
       </div>
     </div>
   </div>

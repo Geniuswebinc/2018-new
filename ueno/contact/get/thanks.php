@@ -1,5 +1,5 @@
 <?php
-$name4=$_POST['nameDate2'];
+$name4=$_GET['nameDate2'];
 ?>
 
 <!DOCTYPE html>

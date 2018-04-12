@@ -16,7 +16,7 @@
 </head>
 <body>
 
-  <form method="post" action="confirm.php">
+  <form method="get" action="confirm.php">
 
   <div class="container">
     <div class="row">

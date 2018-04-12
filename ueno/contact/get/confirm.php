@@ -1,7 +1,7 @@
 <?php
-$name1=$_POST['nameData'];
-$name2=$_POST['mailData'];
-$name3=$_POST['textData'];
+$name1=$_GET['nameData'];
+$name2=$_GET['mailData'];
+$name3=$_GET['textData'];
 
 // session_start();
 // $_SESSION['ndate']=$name1;
@@ -23,7 +23,7 @@ $name3=$_POST['textData'];
   <script type="text/javascript" src="./assets/js/app.js"></script>
 </head>
 <body>
-    <form method="post" action="thanks.php">
+    <form method="get" action="thanks.php">
 
 
   <div class="container">

@@ -27,7 +27,7 @@ $msg=$_GET['sentmsg'];
         </div>
       </div>
 
-
+      <form action="thanks.php" method="get">
       <div class="row">
         <div class="col-xs-offset-4 col-xs-4">
           <div class="allText textName">
@@ -58,12 +58,14 @@ $msg=$_GET['sentmsg'];
 
 
       <div class="row">
-        <div class="col-xs-12 text-center">
-          <input type="submit" value="戻る" class="backbtn">
-          <input type="submit" value="送信" class="sentbtn">
+        <div class="col-xs-6 text-right">
+          <botton type="botton" class="btn btn-default" onclick="history.back();">戻る</botton>
+        </div>
+        <div class="col-xs-6 text-left">
+          <input type="submit" value="送信" class="btn btn-success">
         </div>
       </div>
-
+    </form>
     </div>
 
 

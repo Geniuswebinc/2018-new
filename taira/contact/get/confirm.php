@@ -78,24 +78,24 @@ $InputTextarea=$_GET['InputTextarea'];
     </div>
 
 
-    <div class="row">
-      <div class="col-xs-6">
-        <div class="text-right">
-          <button type="button" class="btn btn-default btn-lg" onclick="history.back()">　　戻る　　</button>
-        </div>
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="text-right">
+              <button type="button" class="btn btn-default btn-lg" onclick="history.back()">　　戻る　　</button>
+          </div>
       </div>
 
 
-      <div class="col-xs-6">
-        <div class="text-left">
-          <button type="submit" class="btn btn-success btn-lg" >　　送信　　</button>
-        </div>
+        <div class="col-xs-6">
+            <div class="text-left">
+                <button type="submit" class="btn btn-success btn-lg" >　　送信　　</button>
+          </div>
       </div>
     </div>
   </form>
-</div>
+  </div>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

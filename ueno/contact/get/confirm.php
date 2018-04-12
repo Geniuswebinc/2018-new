@@ -71,7 +71,8 @@ $name3=$_GET['textData'];
   <div class="row">
     <div class="col-xs-12">
 
-<INPUT type="button" value="戻る" onClick="location.href='index.php'">
+<INPUT type="button" value="戻る" onclick="history.back()">
+
 <INPUT type="button" value="送信" onClick="location.href='thanks.php'">
 
       </div>

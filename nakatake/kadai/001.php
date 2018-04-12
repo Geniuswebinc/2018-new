@@ -31,6 +31,18 @@
             <?php endif; ?>
         </div>
 
+        <div class="text-center">
+            <label>問題3</label>
+
+            <?php if ($id >= 10): ?>
+                <p>10以上の値です</p>
+            <?php elseif ($id >= 1 & $id < 10): ?>
+                <p>9以下の値です</p>
+            <?php elseif ($id < 1): ?>
+                <p>無効の値です</p>
+            <?php endif; ?>
+        </div>
+
     </section>
 
     <!-- Latest compiled and minified JavaScript -->

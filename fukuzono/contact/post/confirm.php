@@ -1,11 +1,11 @@
 <?php
-$name=$_GET['name'];
+$name=$_POST['name'];
 ?>
 <?php
-$email=$_GET['email'];
+$email=$_POST['email'];
 ?>
 <?php
-$content=$_GET['content'];
+$content=$_POST['content'];
 ?>
 
 <!DOCTYPE html>
@@ -27,12 +27,13 @@ $content=$_GET['content'];
     </div>
   </div>
 
-  <form>
+  <form action="thanks.php" method="post">
     <div class="container form-group">
       <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
 		      <label class="control-label">名前</label>
 			    <p class="form-control-static"><?php echo $name; ?></p>
+          <input type="hidden" name="name" value="<?php echo $name; ?>">
         </div>
       </div>
 
@@ -54,7 +55,7 @@ $content=$_GET['content'];
 	    <div class="form-group">
        <div class="row">
          <div class="col-xs-offset-2 col-xs-4 col-sm-6">
-           <button type="button" class="btn btn-default btn-lg">戻る</button>
+           <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
          </div>
 
          <div class="col-xs-4">

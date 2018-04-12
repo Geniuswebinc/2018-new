@@ -15,8 +15,8 @@ label{
 confirm.html
 */
 .label-all{
-  vertical-align: middle;
-  font-size: 25px;
+    padding: 40px;
+     font-size: 25px;
 }
 /*
 thanks.php

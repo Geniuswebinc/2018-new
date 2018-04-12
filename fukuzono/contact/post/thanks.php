@@ -15,14 +15,14 @@
 <body>
     <div class="container text-center">
         <div class="row">
-        <div class="col-xs-12">
-            <h1>お問い合わせ　完了</h>
-            <p class="msg"><?php echo $name.'様、お問い合わせありがとうございました。'; ?></p>
-        </div>
+            <div class="col-xs-12">
+                <h1>お問い合わせ　完了</h>
+                <p class="msg"><?php echo $name.'様、お問い合わせありがとうございました。'; ?></p>
+            </div>
         </div>
     </div>
 
-        <div class="row">
+    <div class="row">
         <div class="col-xs-12 text-center">
             <a href="index.php"><button type="button" class="btn btn-default btn-lg">TOPに戻る</button></a>
         </div>

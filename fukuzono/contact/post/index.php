@@ -11,40 +11,40 @@
 <body>
     <div class="container text-center">
         <div class="row">
-        <div class="col-xs-12">
-            <h1>お問い合わせフォーム</h>
-        </div>
+            <div class="col-xs-12">
+                <h1>お問い合わせフォーム</h>
+            </div>
         </div>
     </div>
 
     <form action="confirm.php" method="post">
         <div class="container form-group">
             <div class="row">
-            <div class="col-xs-offset-1 col-xs-10">
-                <label for="use_name">名前</label>
-                <input type="user_name" name="name" class="form-control">
-            </div>
-            </div>
-
-            <div class="row">
-            <div class="col-xs-offset-1 col-xs-10">
-                <label for="InputEmail">メールアドレス</label>
-                <input type="email" name="email" class="form-control" id="InputEmail">
-            </div>
+                <div class="col-xs-offset-1 col-xs-10">
+                    <label for="use_name">名前</label>
+                    <input type="user_name" name="name" class="form-control">
+                </div>
             </div>
 
             <div class="row">
-            <div class="col-xs-offset-1 col-xs-10">
-                <label for="InputTextarea">内容</label>
-                <textarea class="form-control" name="content" id="InputTextarea"></textarea>
+                <div class="col-xs-offset-1 col-xs-10">
+                    <label for="InputEmail">メールアドレス</label>
+                    <input type="email" name="email" class="form-control" id="InputEmail">
+                </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10">
+                    <label for="InputTextarea">内容</label>
+                    <textarea class="form-control" name="content" id="InputTextarea"></textarea>
+                </div>
             </div>
 
 
             <div class="row">
-            <div class="col-xs-12 text-center">
-                <button type="submit" class="btn btn-primary btn-lg btn-success">確認</button>
-            </div>
+                <div class="col-xs-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg btn-success">確認</button>
+                </div>
             </div>
         </div>
     </form>

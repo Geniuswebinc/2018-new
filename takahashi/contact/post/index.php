@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
     <title>2018/04/09の課題</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -28,20 +28,20 @@
                     <div class="form-group">
                         <label for="InputEmail">名前</label>
                         <input type="text" class="form-control" name="sentname">
-	                </div>
+                    </div>
                 </div>
 
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="form-group">
-		                <label for="Inputmail">メールアドレス</label>
-		                <input type="text" class="form-control" name="sentmail">
-	                </div>
+                        <label for="Inputmail">メールアドレス</label>
+                        <input type="text" class="form-control" name="sentmail">
+                    </div>
                 </div>
 
                 <div class="col-xs-offset-4 col-xs-4">
-	                <div class="form-group">
-		                <label for="InputTextarea">内容</label>
-		                <textarea class="form-control" name="sentmsg"></textarea>
+                    <div class="form-group">
+                        <label for="InputTextarea">内容</label>
+                        <textarea class="form-control" name="sentmsg"></textarea>
 	                </div>
                 </div>
             </div>

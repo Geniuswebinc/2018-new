@@ -30,7 +30,8 @@ session_start();
 
 <p>
   <?php
-   echo $_SESSION['ndate'];　
+   echo $_SESSION['ndate'];
+   unset($_SESSION['ndate']);
   ?>
   　様お問い合せありがとうございました。
 </p>

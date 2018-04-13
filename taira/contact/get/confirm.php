@@ -1,19 +1,26 @@
+<?php
+$name=$_GET['name'];
+$Email=$_GET['Email'];
+$InputTextarea=$_GET['InputTextarea'];
+?>
+<!-- getとpostのconfirm.phpのフォームの検索結果に入れておく。 -->
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="./assets/css/app.css">
-  <script type='text/javascript' src="./assets/js/app.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <script type='text/javascript' src="./assets/js/app.js"></script>
 </head>
 <body>
   <div class="container">
 
 
+    <form action="thanks.php" method="get">
     <div class="row">
       <div class="col-xs-12">
         <div class="text-center">
@@ -32,7 +39,9 @@
 
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
-        <p><br ><br >◯◯　◯◯<br ><br ><br ><br ><br ></P>
+        <?php
+        echo $name;
+        ?>
       </div>
     </div>
 
@@ -46,7 +55,9 @@
 
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
-        <p><br ><br >@example.jp<br ><br ><br ><br ><br ></P>
+        <?php
+        echo $Email;
+        ?>
       </div>
     </div>
 
@@ -60,26 +71,28 @@
 
     <div class="row">
       <div class="col-xs-offset-2 col-xs-10">
-        <p><br ><br >問い合わせ内容が入ります。入ります。<br ><br ><br ><br ><br ></P>
+        <?php
+        echo $InputTextarea;
+        ?>
       </div>
     </div>
-
 
 
       <div class="row">
         <div class="col-xs-6">
           <div class="text-right">
-              <button class="btn btn-default btn-lg">　　戻る　　</button>
+              <button type="button" class="btn btn-default btn-lg" onclick="history.back()">戻る</button>
           </div>
-        </div>
-
-        <div class="col-xs-6">
-          <div class="text-left">
-              <button class="btn btn-success btn-lg">　　送信　　</button>
-          </div>
-        </div>
       </div>
 
+
+        <div class="col-xs-6">
+            <div class="text-left">
+                <button type="submit" class="btn btn-success btn-lg" >送信</button>
+          </div>
+      </div>
+    </div>
+  </form>
   </div>
 
   <!-- Latest compiled and minified JavaScript -->

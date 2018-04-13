@@ -28,7 +28,7 @@
         <div class="col-xs-12">
           	<div class="form-group">
               <label for="InputName">名前</label>
-              <input type="text" name="name" lass="form-control input-lg" id="InputName">
+              <input type="text" name="name" class="form-control input-lg" id="InputName">
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
           <div class="col-xs-12">
             <div class="form-group">
               <label for="InputTextarea">内容</label>
-              <textarea rows="5" name="InputTextarea"class="form-control input-lg" id="InputTextarea" ></textarea>
+              <textarea rows="5" name="InputTextarea" class="form-control input-lg" id="InputTextarea" ></textarea>
             </div>
           </div>
         </div>
@@ -56,11 +56,11 @@
     <div class="row">
       <div class="col-xs-offset-4 col-xs-4 col-xs-offset-4">
         <div class="text-center">
-          <button type="submit"class="btn btn-success btn-lg">お問い合わせはこちら</button>
+          <button type="submit" class="btn btn-success btn-lg">お問い合わせはこちら</button>
         </div>
       </div>
     </div>
-    
+
   </form>
 
   </div>

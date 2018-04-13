@@ -88,7 +88,7 @@ $InputTextarea=$_GET['InputTextarea'];
 
         <div class="col-xs-6">
             <div class="text-left">
-                <button type="submit" class="btn btn-success btn-lg">送信</button>
+                <button type="submit" class="btn btn-success btn-lg" >送信</button>
           </div>
       </div>
     </div>

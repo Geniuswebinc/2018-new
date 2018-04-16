@@ -47,20 +47,19 @@
             <label>問題4</label>
             <table class="table">
                 <tbody>
-                    <tr>
-                        <?php
-                            for ($i = 1; $i <= 35; $i++) {
-                                if ($i <= 30 ) {
-                                    echo '<td>'.$i.'</td>';
-                                } elseif ($i > 30) {
-                                    echo '<td></td>';
-                                }
-                                if ($i % 7==0) {
-                                    echo '</tr><tr>';
-                                }
+                    <?php
+                        echo '<tr>';
+                        for ($i = 1; $i <= 35; $i++) {
+                            if ($i <= 30 ) {
+                                echo '<td>'.$i.'</td>';
+                            } elseif ($i > 30) {
+                                echo '<td></td>';
                             }
-                        ?>
-                    </tr>
+                            if ($i % 7==0) {
+                                echo '</tr>';
+                            }
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

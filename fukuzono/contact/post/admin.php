@@ -23,15 +23,13 @@ var_dump($contacts);
 <body>
     <h2>管理画面</h2>
         <table class="table">
-
-                <tr>
-                    <th>id</th>
-                    <th>名前</th>
-                    <th>メール</th>
-                    <th>内容</th>
-                    <th>登録日</th>
-
-                </tr>
+            <tr>
+                <th>id</th>
+                <th>名前</th>
+                <th>メール</th>
+                <th>内容</th>
+                <th>登録日</th>
+            </tr>
                 <?php
                     foreach ($contacts as $val) {
                         echo '<tr>';
@@ -42,15 +40,9 @@ var_dump($contacts);
                         echo '<td>'.$val['created_at'].'</td>';
                         echo '</tr>';
                     }
-                // <textera>
-
                 ?>
 
     </table>
-
-    <p>
-    </p>
-
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

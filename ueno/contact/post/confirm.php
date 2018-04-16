@@ -56,6 +56,7 @@ $name3=$_POST['textData'];
                     メールアドレス
                 </p>
                 <?php echo $name2; ?>
+                    <input type="hidden" name="mailDate2" value= <?php echo $name2; ?> >
             </div>
         </div>
     </div>
@@ -68,6 +69,7 @@ $name3=$_POST['textData'];
                     内容
                 </p>
                 <?php echo $name3; ?>
+                <input type="hidden" name="textDate2" value= <?php echo $name3; ?> >
             </div>
         </div>
     </div>

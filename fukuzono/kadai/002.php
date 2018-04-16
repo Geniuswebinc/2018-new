@@ -46,22 +46,29 @@
     <br>
     <br>
     <h4>【問題４】</h4>
-    <table class="table">
+    <div class="container">
+        <div class="row col-xs-12">
+            <table class="table">
         <?php
-            for ($i= 1; $i <= 30; $i++){
-                echo '<td>'.($i).'</td>';
+            for ($i = 1; $i <= 30; $i++){
                 if ($i % 7 == 0 ) {
+                echo '<tr>';
+                echo "<td>".$i."</td>";
+                }
+                if( $i % 7 == 0 ){
+                    echo "</tr>";
+                }
+            }
+            for ($j = $i % 7 ; $j <= 7; $j++){
+                echo '<td>'.'</td>';
+                if ($j % 7 == 0 ) {
                     echo '<tr></tr>';
                 }
             }
         ?>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-    </table>
-
+            </table>
+        </div>
+    </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/js/app.js"></script>

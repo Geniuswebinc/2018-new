@@ -1,5 +1,20 @@
 <?php
-    $name = $_POST['name'];
+require_once dirname(__FILE__) .'/data/require.php';
+
+// データベース接続のクラス
+$conn = new DbConn();
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$content = $_POST['content'];
+
+$sql  = 'INSERT INTO ';
+$sql .= '    contacts (name, mail, content)';
+$sql .= '  VALUES ( ';
+$sql .= '   "'.$name.'", "'.$email.'", "'.$content.'" ';
+$sql .= '  )';
+// var_dump($sql);
+$conn->fetch($sql);
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +33,14 @@
             <div class="col-xs-12">
                 <h1>お問い合わせ　完了</h>
                 <p class="msg"><?php echo $name.'様、お問い合わせありがとうございました。'; ?></p>
+                <p class="msg"><?php echo $email; ?></p>
+                <p class="msg"><?php echo $content; ?></p>
             </div>
         </div>
     </div>
+
+    <p>
+    </p>
 
     <div class="row">
         <div class="col-xs-12 text-center">

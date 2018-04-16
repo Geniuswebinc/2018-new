@@ -3,7 +3,12 @@
     // データベース接続のクラス
     $conn = new DbConn();
 
+    $search_name = $_POST['search_name'];
+
     $sql  = 'SELECT * FROM contacts';
+    if ($search_name) {
+        $sql .= ' WHERE name like "%'.$search_name.'%"';
+    }
     $sql .= ' ORDER BY created_at DESC';
     $contacts = $conn->fetch($sql);
 ?>
@@ -20,6 +25,14 @@
 <body>
     <section>
         <h1>管理画面</h1>
+
+        <div>
+            <form method="post">
+                <input type="text" name="search_name">
+                <input type="submit" value="検索">
+            </form>
+        </div>
+
         <table class="table">
             <thead>
                 <tr>

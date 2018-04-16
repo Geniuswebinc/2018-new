@@ -1,6 +1,3 @@
-<?php
-    $sum=0;
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +36,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <p>問題3(20161004/03.php)</p>
+                <?php $sum=0; ?>
                 <?php for($i=1;$i<=100;$i++): ?>
                     <?php if($i%2==0): ?>
                         <?php $sum+=$i; ?>

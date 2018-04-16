@@ -12,36 +12,36 @@
 </head>
 <body>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <h1><strong>お問い合わせ　完了</strong></h1>
-                    </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <h1><strong>お問い合わせ　完了</strong></h1>
                 </div>
             </div>
-
-
-
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <p>お問い合わせありがとうございました。<br ><br ></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center">
-                        <a href="index.php" class="btn btn-default">TOPに戻る</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+
+
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <p>お問い合わせありがとうございました。<br ><br ></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="text-center">
+                    <a href="index.php" class="btn btn-default">TOPに戻る</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

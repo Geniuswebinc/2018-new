@@ -49,7 +49,7 @@
                 <tbody>
                     <tr>
                         <?php
-                            for ($i = 1; $i <= 100; $i++) {
+                            for ($i = 1; $i <= 30; $i++) {
                                 echo '<td>'.$i.'</td>';
                                 if ($i % 7==0) {
                                     echo '</tr><tr>';

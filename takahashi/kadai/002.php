@@ -1,11 +1,4 @@
 <?php
-    $mouth = array(
-        array(1,2,3,4,5,6,7,),
-        array(8,9,10,11,12,13,14),
-        array(15,16,17,18,19,20,21),
-        array(22,23,24,25,26,27,28,),
-        array(29,30));
-
     $sum=0;
 ?>
 <!DOCTYPE html>
@@ -60,13 +53,13 @@
                     <p><?php echo '<tr>' ?></p>
                     <?php for($i=1;$i<=30;$i++): ?>
                         <p><?php echo '<td>'.$i.'</td>'; ?></p>
-                            <?php if($i%7==0): ?>
-                                <p><?php echo '</tr><tr>'; ?></p>
-                            <?php endif; ?>
-                        <?php endfor; ?>
-                        <?php for($i=31;$i<=35;$i++): ?>
-                            <p><?php echo '<td></td>'; ?></p>
-                        <?php endfor; ?>
+                        <?php if($i%7==0): ?>
+                            <p><?php echo '</tr><tr>'; ?></p>
+                        <?php endif; ?>
+                    <?php endfor; ?>
+                    <?php for($j=$i;$j<=35;$j++): ?>
+                        <p><?php echo '<td></td>'; ?></p>
+                    <?php endfor; ?>
                     <p><?php echo '</tr>' ?></p>
                 </table>
             </div>

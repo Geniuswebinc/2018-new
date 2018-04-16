@@ -20,27 +20,27 @@ $id=$_GET['id'];
 
     <div class="container">
         <div class="row">
-                <div class="col-xs-12">
-                    <p>問題1</p>
-                    <p><?php echo "id=".$id; ?></p>
+            <div class="col-xs-12">
+                <p>問題1</p>
+                <p><?php echo "id=".$id; ?></p>
 
-                    <p>問題2</p>
-                    <?php if($id>=10): ?>
-                        <p><?php echo "10以上の値です"; ?></p>
-                    <?php elseif($id<10): ?>
-                        <p><?php echo "9以下の値です"; ?></>
-                    <?php endif ?>
+                <p>問題2</p>
+                <?php if($id>=10): ?>
+                    <p><?php echo "10以上の値です"; ?></p>
+                <?php elseif($id<10): ?>
+                    <p><?php echo "9以下の値です"; ?></p>
+                <?php endif ?>
 
-                    <p>問題3</p>
-                    <?php if($id>=10): ?>
-                        <p><?php echo "10以上の値です"; ?></p>
-                    <?php elseif($id<10 && $id>=1): ?>
-                        <p><?php echo "9以下の値です"; ?></p>
-                    <?php else: ?>
-                        <p><?php echo "無効の値です"; ?></p>
-                    <?php endif ?>
+                <p>問題3</p>
+                <?php if($id>=10): ?>
+                    <p><?php echo "10以上の値です"; ?></p>
+                <?php elseif($id<10 && $id>=1): ?>
+                    <p><?php echo "9以下の値です"; ?></p>
+                <?php else: ?>
+                    <p><?php echo "無効の値です"; ?></p>
+                <?php endif ?>
 
-                </div>
+            </div>
         </div>
     </div>
 

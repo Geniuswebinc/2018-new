@@ -56,16 +56,19 @@
 
             <div class="col-xs-12">
                 <p>問題4(20161004/04.php)</p>
-                <table  border="1" frame="hsides" rules="rows" width="400" >
-                    <?php foreach($mouth as $week): ?>
-                        <p><?php echo '<tr>'; ?></p>
-                            <?php foreach($week as $day): ?>
-                                <p><?php echo '<td>'.$day. '</td>'; ?></p>
-                            <?php endforeach; ?>
-                        <p><?php echo '<tr>'; ?></p>
-                    <?php endforeach; ?>
+                <table  border="1" frame="hsides" rules="rows" width="400" empty-cells="show">
+                    <p><?php echo '<tr>' ?></p>
+                    <?php for($i=1;$i<=30;$i++): ?>
+                        <p><?php echo '<td>'.$i.'</td>'; ?></p>
+                            <?php if($i%7==0): ?>
+                                <p><?php echo '</tr><tr>'; ?></p>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                        <?php for($i=31;$i<=35;$i++): ?>
+                            <p><?php echo '<td></td>'; ?></p>
+                        <?php endfor; ?>
+                    <p><?php echo '</tr>' ?></p>
                 </table>
-
             </div>
         </div>
     </div>

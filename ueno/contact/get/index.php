@@ -26,59 +26,55 @@
             </div>
         </div>
 
-<!-- テキストボックス -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p>
-                    名前
-                </p>
-                <input type="text" name="nameData" class="form-control" placeholder="">
+        <!-- テキストボックス -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>
+                        名前
+                    </p>
+                    <input type="text" name="nameData" class="form-control" placeholder="">
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- メールアドレス入力欄 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p>
-                    メールアドレス
-                </p>
-                <input type="text" name="mailData" class="form-control" placeholder="">
+        <!-- メールアドレス入力欄 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>
+                        メールアドレス
+                    </p>
+                    <input type="text" name="mailData" class="form-control" placeholder="">
+                </div>
             </div>
         </div>
-    </div>
 
-<!-- 内容入力欄 -->
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p>
-                    内容
-                </p>
-		              <textarea name="textData"  class="form-control"  id="InputTextarea" placeholder=""></textarea>
-                  </div>
-              </div>
-          </div>
-
-<!-- 送信ボタン -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-
-                <input type="submit" value="送信" class="btn btn-success">
-
+        <!-- 内容入力欄 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>
+                        内容
+                    </p>
+		                  <textarea name="textData"  class="form-control"  id="InputTextarea" placeholder=""></textarea>
+                </div>
             </div>
         </div>
+
+        <!-- 送信ボタン -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <input type="submit" value="送信" class="btn btn-success">
+
+                </div>
+            </div>
         </div>
     </form>
 
- <!-- <div class="header">header</div>
- <div class="main-visual">main-visual</div>
- <div class="sidebar">sidebar</div>
- <div class="content">content</div>
- <div class="footer">footer</div> -->
+
 </body>
 </html>

@@ -19,6 +19,17 @@
             <?php } ?>
         </div>
 
+        <div class="text-center">
+            <label>問題2</label>
+            <p>
+                <?php for ($i = 1; $i <= 100; $i++) {
+                    if ($i % 2==0) {
+                        echo $i;
+                    }
+                } ?>
+            </p>
+        </div>
+
 
     </section>
 

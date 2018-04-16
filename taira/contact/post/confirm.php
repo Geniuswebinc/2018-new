@@ -91,6 +91,8 @@ $InputTextarea=$_POST['InputTextarea'];
                 </div>
             </div>
             <input name="name" type="hidden" value="<?php echo $name; ?>">
+            <input name="Email" type="hidden" value="<?php echo $Email; ?>">
+            <input name="InputTextarea" type="hidden" value="<?php echo $InputTextarea; ?>">
         </form>
     </div>
 

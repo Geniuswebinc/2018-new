@@ -1,7 +1,7 @@
 <?php
     $name=$_POST['sentname'];
     $mail=$_POST['sentmail'];
-    $msg=$_POST['sentmsg'];
+    $content=$_POST['sentcontent'];
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +51,7 @@
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="allText textTextarea">
                         <p>内容</p>
-                        <p><?php echo $msg;?></p>
+                        <p><?php echo $content;?></p>
                     </div>
                 </div>
             </div>
@@ -63,6 +63,8 @@
 
                 <div class="col-xs-6 text-left">
                     <input type="hidden" name="sentname" value="<?php echo $name; ?>">
+                    <input type="hidden" name="sentmail" value="<?php echo $mail; ?>">
+                    <input type="hidden" name="sentcontent" value="<?php echo $content; ?>">
                     <input type="submit" value="送信" class="btn btn-success">
                 </div>
             </div>

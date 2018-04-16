@@ -29,7 +29,7 @@ if(is_numeric($Question)==false || $Question==null){
     echo "無効の値です";
 }else if($Question>=10){
     echo '10以上の値です'.'<br>';
-}else if($Question<10){
+}else if($Question<10 && $Question>=1){
     echo '9以下の値です'.'<br>';
 };
 ?>

@@ -1,7 +1,23 @@
 <?php
+require_once dirname(__FILE__) .'/data/require.php';
+
 $name4=$_POST['nameDate2'];
+$mail5=$_POST['mailDate2'];
+$text6=$_POST['textDate2'];
+
+$sql  = 'INSERT INTO ';
+$sql .= '    contacts (name, mail, content)';
+$sql .= '  VALUES ( ';
+$sql .= ' "'.$name4.'", "'.$mail5.'", "'.$text6.'" );'
+
 ?>
 
+<?php
+// データベース接続のクラス
+$conn = new DbConn();
+
+$conn->fetch($sql);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,11 +44,11 @@ $name4=$_POST['nameDate2'];
                 </h1>
 
                 <p>
-                    <?php
-                    echo $name4;
-                    ?>
-  　                 様お問い合せありがとうございました。
+                    <?php echo $name4;?> 様お問い合せありがとうございました。<br>
+                    <?php echo $mail5;?><br>
+                    <?php echo $text6; ?></br>
                 </p>
+
             </div>
         </div>
     </div>
@@ -49,6 +65,6 @@ $name4=$_POST['nameDate2'];
             </div>
         </div>
     </div>
- 
+
 </body>
 </html>

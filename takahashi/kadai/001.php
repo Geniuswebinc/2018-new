@@ -1,7 +1,7 @@
 <?php
-    $id=$_GET['id'];
+$id=$_GET['id'];
 ?>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,24 +21,24 @@
     <div class="container">
         <div class="row">
                 <div class="col-xs-12">
-                    <p><br>問題1</p>
+                    <p>問題1</p>
                     <p><?php echo "id=".$id; ?></p>
 
-                    <p><br>問題2</p>
+                    <p>問題2</p>
                     <?php if($id>=10): ?>
                         <p><?php echo "10以上の値です"; ?></p>
                     <?php elseif($id<10): ?>
-                        <p><?php echo "9以下の値です"; ?></p>
-                    <?php endif; ?>
+                        <p><?php echo "9以下の値です"; ?></>
+                    <?php endif ?>
 
-                    <p><br>問題3</p>
+                    <p>問題3</p>
                     <?php if($id>=10): ?>
                         <p><?php echo "10以上の値です"; ?></p>
                     <?php elseif($id<10 && $id>=1): ?>
                         <p><?php echo "9以下の値です"; ?></p>
                     <?php else: ?>
                         <p><?php echo "無効の値です"; ?></p>
-                    <?php endif; ?>
+                    <?php endif ?>
 
                 </div>
         </div>

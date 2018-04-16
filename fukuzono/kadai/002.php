@@ -51,7 +51,7 @@
             for ($i= 1; $i <= 30; $i++){
                 echo '<td>'.($i).'</td>';
                 if ($i % 7 == 0 ) {
-                    echo '<br />'.'<tr></tr>';
+                    echo '<tr></tr>';
                 }
             }
         ?>

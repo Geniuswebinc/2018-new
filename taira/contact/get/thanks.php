@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="text-center">
-                        <button type="submit" onclick="location.href='index.php'"class="btn btn-default btn-lg">TOPに戻る</button>
+                        <a href="index.php" class="btn btn-default">TOPに戻る</a>
                     </div>
                 </div>
             </div>

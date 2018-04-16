@@ -1,3 +1,8 @@
+<?php
+$name=$_POST['name'];
+$Email=$_POST['Email'];
+$InputTextarea=$_POST['InputTextarea'];
+?>
 <!DOCTYPE html>
 <html>
 
@@ -12,25 +17,33 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="text-center">
-                    <h1><strong>お問い合わせ　確認</strong></h1>
+
+        <form action="thanks.php" method="post">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <h1><strong>お問い合わせ　確認</strong></h1>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-xs-offset-2 col-xs-10">
-                <p class="label-all">名前</p>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-xs-offset-2 col-xs-10">
-                <p><br ><br >◯◯　◯◯<br ><br ><br ><br ><br ></P>
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <p class="label-all">名前</p>
                 </div>
             </div>
+
+
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <?php
+                    echo $name;
+                    ?>
+                </div>
+            </div>
+
+
 
             <div class="row">
                 <div class="col-xs-offset-2 col-xs-10">
@@ -38,11 +51,15 @@
                 </div>
             </div>
 
+
             <div class="row">
                 <div class="col-xs-offset-2 col-xs-10">
-                    <p><br ><br >@example.jp<br ><br ><br ><br ><br ></p>
+                    <?php
+                    echo $Email;
+                    ?>
                 </div>
             </div>
+
 
             <div class="row">
                 <div class="col-xs-offset-2 col-xs-10">
@@ -52,7 +69,9 @@
 
             <div class="row">
                 <div class="col-xs-offset-2 col-xs-10">
-                    <p><br ><br >問い合わせ内容が入ります。入ります。<br ><br ><br ><br ><br ></p>
+                    <?php
+                    echo $InputTextarea;
+                    ?>
                 </div>
             </div>
 
@@ -61,17 +80,18 @@
             <div class="row">
                 <div class="col-xs-6">
                     <div class="text-right">
-                        <button class="btn btn-default btn-lg">　　戻る　　</button>
+                        <button type="button" class="btn btn-default btn-lg"onclick="history.back()">戻る</button>
+                    </div>
+                </div>
+
+                <div class="col-xs-6">
+                    <div class="text-left">
+                        <button type="submit" class="btn btn-success btn-lg">送信</button>
                     </div>
                 </div>
             </div>
-
-            <div class="col-xs-6">
-                <div class="text-left">
-                    <button class="btn btn-success btn-lg">　　送信　　</button>
-                </div>
-            </div>
-        </div>
+            <input name="name" type="hidden" value="<?php echo $name; ?>">
+        </form>
     </div>
 
     <!-- Latest compiled and minified JavaScript -->

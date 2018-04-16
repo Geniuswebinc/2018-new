@@ -31,7 +31,7 @@
         </div>
 
         <div class="text-center">
-            <label>問題2</label>
+            <label>問題3</label>
             <?php
                 $sum = 0;
                 for ($i = 1; $i <= 100; $i++) {
@@ -41,6 +41,24 @@
                 }
             ?>
             <p><?php echo $sum; ?></p>
+        </div>
+
+        <div class="text-center">
+            <label>問題4</label>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <?php
+                            for ($i = 1; $i <= 100; $i++) {
+                                echo '<td>'.$i.'</td>';
+                                if ($i % 7==0) {
+                                    echo '</tr><tr>';
+                                }
+                            }
+                        ?>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
 

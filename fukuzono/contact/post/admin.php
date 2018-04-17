@@ -1,13 +1,19 @@
 <?php
-require_once dirname(__FILE__) .'/data/require.php';
+    require_once dirname(__FILE__) .'/data/require.php';
 
-// データベース接続のクラス
-$conn = new DbConn();
-$sql  = 'SELECT * FROM contacts';
-$sql .= ' ORDER BY created_at DESC';
+    // データベース接続のクラス
+    $conn = new DbConn();
 
-$contacts = $conn->fetch($sql);
-var_dump($contacts);
+    $search =$_POST['search'];
+
+    $sql  = 'SELECT * FROM contacts';
+    $sql .= ' WHERE name LIKE "%'.$search.'%"';
+    $sql .= ' ORDER BY created_at DESC';
+
+    $contacts = $conn->fetch($sql);
+    // var_dump($contacts);
+    // var_dump($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +28,11 @@ var_dump($contacts);
 
 <body>
     <h2>管理画面</h2>
+        <form  method ="post">
+            <input type="text" name="search">
+            <button type="submit" class="btn-defaul">検索</button>
+        </form>
+
         <table class="table">
             <tr>
                 <th>id</th>
@@ -41,8 +52,9 @@ var_dump($contacts);
                         echo '</tr>';
                     }
                 ?>
+        </table>
 
-    </table>
+
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -1,19 +1,26 @@
 <?php
     require_once dirname(__FILE__) .'/data/require.php';
 
+    $name=$_POST['sentname'];
+    $mail=$_POST['sentmail'];
+    $content=$_POST['sentcontent'];
+    $seach=$_POST['seach'];
 
     // データベース接続のクラス
     $conn = new DbConn();
 
-    $sql  = 'SELECT * FROM contacts ORDER BY created_at desc';
+    if(isset($_POST['seach'])){
+        $sql  = 'SELECT * FROM contacts';
+        $sql .= '   WHERE name LIKE "%'.$seach.'%"';
+        $sql .= '   ORDER BY created_at desc;';
+    }else{
+        $sql  = 'SELECT * FROM contacts';
+        $sql .= '   ORDER BY created_at desc;';
+    }
+
     $contacts = $conn->fetch($sql);
     var_dump($contacts);
-
-    $name=$_POST['sentname'];
-    $mail=$_POST['sentmail'];
-    $content=$_POST['sentcontent'];
-
-
+    var_dump($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,6 +43,18 @@
         <div class="row">
             <div class="col-xs-12 text-center topmsg">
                 <h1>管理画面</h1>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-xs-offset-4 col-xs-4">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="InputSeachName">名前検索</label>
+                        <input type="text" class="form-control" name="seach">
+                    </div>
+                    <input type="submit" class="btn btn-success" value="検索">
+                </form>
             </div>
         </div>
 

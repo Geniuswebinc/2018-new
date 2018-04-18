@@ -1,13 +1,29 @@
 <?php
-require_once dirname(__FILE__) .'/data/require.php';
+    require_once dirname(__FILE__) .'/data/require.php';
 
-// データベース接続のクラス
-$conn = new DbConn();
-$sql  = 'SELECT * FROM contacts';
-$sql .= ' ORDER BY created_at DESC';
+    // データベース接続のクラス
+    $conn = new DbConn();
 
-$contacts = $conn->fetch($sql);
-var_dump($contacts);
+    $search = $_POST['search'];
+    $memo = $_POST['memo'];
+    $id = $_POST['id'];
+
+    if($memo){
+        $sql  = 'UPDATE contacts';
+        $sql .= ' SET note = "'.$memo.'"';
+        $sql .= ' WHERE id = "'.$id.'"';
+        $conn->execute($sql);
+    }
+
+    $sql  = 'SELECT * FROM contacts';
+    if($search){
+        $sql .= ' WHERE name LIKE "%'.$search.'%"';
+    }
+    $sql .= ' ORDER BY created_at DESC';
+
+    // var_dump($sql);
+
+    $contacts = $conn->fetch($sql);
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +38,11 @@ var_dump($contacts);
 
 <body>
     <h2>管理画面</h2>
+        <form  method ="post">
+            <input type="text" name="search">
+            <button type="submit" class="btn-defaul">検索</button>
+        </form>
+
         <table class="table">
             <tr>
                 <th>id</th>
@@ -29,6 +50,7 @@ var_dump($contacts);
                 <th>メール</th>
                 <th>内容</th>
                 <th>登録日</th>
+                <th>メモ欄</th>
             </tr>
                 <?php
                     foreach ($contacts as $val) {
@@ -38,11 +60,22 @@ var_dump($contacts);
                         echo '<td>'.$val['mail'].'</td>';
                         echo '<td>'.$val['content'].'</td>';
                         echo '<td>'.$val['created_at'].'</td>';
+                        echo '<td>';
+                ?>
+                <form  method="post">
+                    <textarea name ="memo"><?php echo $val['note'];?></textarea>
+                    <button type="submit" class="btn-xs btn-success">送信</button>
+                    <input type="hidden" name="id" value="<?php echo $val['id'];?>">
+                </form>
+                <?php
+                        echo '</td>';
                         echo '</tr>';
                     }
                 ?>
 
-    </table>
+        </table>
+
+
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

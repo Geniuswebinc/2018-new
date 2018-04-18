@@ -4,16 +4,26 @@
     // データベース接続のクラス
     $conn = new DbConn();
 
-    $search =$_POST['search'];
+    $search = $_POST['search'];
+    $memo = $_POST['memo'];
+    $id = $_POST['id'];
+
+    if($memo){
+        $sql  = 'UPDATE contacts';
+        $sql .= ' SET note = "'.$memo.'"';
+        $sql .= ' WHERE id = "'.$id.'"';
+        $conn->execute($sql);
+    }
 
     $sql  = 'SELECT * FROM contacts';
-    $sql .= ' WHERE name LIKE "%'.$search.'%"';
+    if($search){
+        $sql .= ' WHERE name LIKE "%'.$search.'%"';
+    }
     $sql .= ' ORDER BY created_at DESC';
 
-    $contacts = $conn->fetch($sql);
-    // var_dump($contacts);
     // var_dump($sql);
 
+    $contacts = $conn->fetch($sql);
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +50,7 @@
                 <th>メール</th>
                 <th>内容</th>
                 <th>登録日</th>
+                <th>メモ欄</th>
             </tr>
                 <?php
                     foreach ($contacts as $val) {
@@ -49,9 +60,19 @@
                         echo '<td>'.$val['mail'].'</td>';
                         echo '<td>'.$val['content'].'</td>';
                         echo '<td>'.$val['created_at'].'</td>';
+                        echo '<td>';
+                ?>
+                <form  method="post">
+                    <textarea name ="memo"><?php echo $val['note'];?></textarea>
+                    <button type="submit" class="btn-xs btn-success">送信</button>
+                    <input type="hidden" name="id" value="<?php echo $val['id'];?>">
+                </form>
+                <?php
+                        echo '</td>';
                         echo '</tr>';
                     }
                 ?>
+
         </table>
 
 

@@ -1,5 +1,24 @@
 <?php
+require_once dirname(__FILE__) .'/data/require.php';
+
+// データベース接続のクラス
+$conn = new DbConn();
+
 $name=$_POST['name'];
+$Email=$_POST['Email'];
+$InputTextarea=$_POST['InputTextarea'];
+
+$name = $_POST['name'];
+$mail = $_POST['Email'];
+$text = $_POST['InputTextarea'];
+
+$sql  = 'INSERT INTO ';
+$sql .= '    contacts (name, mail, content)';
+$sql .= '  VALUES ( ';
+$sql .= '   "'.$name.'", "'.$mail.'", "'.$text.'" ';
+$sql .= '  )';
+// var_dump($sql);
+$conn->fetch($sql);
  ?>
 <!DOCTYPE html>
 <html>
@@ -27,11 +46,10 @@ $name=$_POST['name'];
         <div class="row">
             <div class="col-xs-12">
                 <div class="text-center">
-                    <p><?php echo $name; ?>様、お問い合わせありがとうございました。</p>
+                    <p><?php echo $name; ?>様、お問い合わせありがとうございました。    <?php echo '<br>'.$Email.'<br>'.$InputTextarea; ?></p>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-xs-12">
                 <div class="text-center">

@@ -4,6 +4,16 @@
     $conn = new DbConn();
 
     $search_name = $_POST['search_name'];
+    $set_memo = $_POST['memo'];
+    $id = $_POST['contacts_id'];
+
+    if ($set_memo) {
+        $sql = 'UPDATE contacts';
+        $sql .= ' SET note ="'.$set_memo.'"';
+        $sql .= ' WHERE id ='.$id;
+
+        $conn->execute($sql);
+    }
 
     $sql  = 'SELECT * FROM contacts';
     if ($search_name) {
@@ -41,6 +51,7 @@
                     <th>メール</th>
                     <th>内容</th>
                     <th>登録日</th>
+                    <th>メモ</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +62,15 @@
                     echo '<td>'.$value['mail'].'</td>';
                     echo '<td>'.$value['content'].'</td>';
                     echo '<td>'.$value['created_at'].'</td>';
+                ?>
+                <td>
+                    <form method=post>
+                        <textarea name="memo" rows="2" cols="30"><?php echo $value['note']; ?></textarea>
+                        <input type="submit" value="送信" class="bnt btn-success">
+                        <input type="hidden" name="contacts_id" value="<?php echo $value['id'] ?>">
+                    </form>
+                </td>
+                <?php
                     echo '</tr>';
                 }?>
             </tbody>

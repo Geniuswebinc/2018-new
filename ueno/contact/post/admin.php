@@ -8,8 +8,8 @@ $conn = new DbConn();
 
 if($memo){
     $sql = 'UPDATE contacts';
-    $sql.= ' SET note = "'.$memo.'"';
     $sql.= ' WHERE id = '.$id.'';
+    $sql.= ' SET note = "'.$memo.'"';
     //var_dump("update入ってます");
     //var_dump($id);
 

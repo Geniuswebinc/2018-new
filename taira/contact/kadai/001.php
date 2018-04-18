@@ -25,12 +25,12 @@ if($Question>=10){
 };
 
 echo '問題3'.'<br>';
-if($Question<1){
-    echo "無効の値です";
-}else if($Question>=10){
-    echo '10以上の値です'.'<br>';
+if($Question>=10){
+    echo "10以上の値です";
 }else if($Question<10 && $Question>=1){
     echo '9以下の値です'.'<br>';
+}else if($Question<1){
+    echo '無効の値です'.'<br>';
 };
 ?>
 <!-- Latest compiled and minified JavaScript -->

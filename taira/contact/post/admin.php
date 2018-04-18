@@ -12,8 +12,8 @@ if(!is_null($id)){
     $sql .= '   SET note = "'.$note.'"';
     $sql .= '   WHERE id = '.$id.'';
     $sql .= '   ORDER BY created_at DESC';
+    $conn->execute($sql);
 }
-$conn->execute($sql);
 if(!is_null($name)){
     $sql  = 'SELECT * FROM contacts';
     $sql .= '   WHERE name LIKE "%'. $name .'%"';

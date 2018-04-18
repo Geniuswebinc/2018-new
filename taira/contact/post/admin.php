@@ -7,21 +7,18 @@ require_once dirname(__FILE__) .'/data/require.php';
 
 // データベース接続のクラス
 $conn = new DbConn();
-if(!is_null($id)){
+if($id){
     $sql  = 'UPDATE contact_db . contacts';
     $sql .= '   SET note = "'.$note.'"';
     $sql .= '   WHERE id = '.$id.'';
     $sql .= '   ORDER BY created_at DESC';
     $conn->execute($sql);
 }
-if(!is_null($name)){
-    $sql  = 'SELECT * FROM contacts';
+$sql  = 'SELECT * FROM contacts';
+if($name){
     $sql .= '   WHERE name LIKE "%'. $name .'%"';
-    $sql .= '   ORDER BY created_at DESC';
-}else if(is_null($name)){
-    $sql  = 'SELECT * FROM contacts';
-    $sql .= ' ORDER BY created_at DESC';
 }
+$sql .= '   ORDER BY created_at DESC';
 $contacts = $conn->fetch($sql);
 //値の入った配列や変数の中身を表示
 //var_dump($sql);
@@ -52,10 +49,8 @@ $contacts = $conn->fetch($sql);
             <div class="col-xs-12">
                 <div class="text-right">
                     <form action="" method="post">
-                        <p>
-                            名前：<input type="text" name="select_name">
-                            <input type="submit" value="送信する">
-                        </p>
+                        <input type="text" name="select_name" placeholder="検索する名前を入力">
+                        <input type="submit" value="送信する">
                     </form>
                 </div>
             </div>
@@ -109,7 +104,6 @@ $contacts = $conn->fetch($sql);
         </div>
 
     </div>
-</form>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

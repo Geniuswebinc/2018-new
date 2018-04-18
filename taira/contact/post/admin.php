@@ -1,8 +1,9 @@
 <?php
+require_once dirname(__FILE__) .'/data/require.php';
 $name= $_POST['select_name'];
 $note= $_POST['note'];
 $id= $_POST['id'];
-require_once dirname(__FILE__) .'/data/require.php';
+
 
 
 // データベース接続のクラス

@@ -6,22 +6,21 @@
     require_once dirname(__FILE__) .'/data/require.php';
     $conn = new DbConn();
 
-    if($memo){
-    $sql = 'UPDATE contacts';
-    $sql.= ' SET note = "'.$memo.'"';
-    $sql.= ' WHERE id = '.$id.'';
-    //var_dump("update入ってます");
+        if($memo){
+            $sql = 'UPDATE contacts';
+            $sql.= ' SET note = "'.$memo.'"';
+            $sql.= ' WHERE id = '.$id.'';
+            //var_dump("update入ってます");
+            //var_dump($id);
 
-    //var_dump($id);
-
-    }
+        }
     $id = $conn->execute($sql);
     //var_dump($sql);
     $sql  = 'SELECT * FROM contacts';
-    if($name){
-    $sql.=  ' WHERE name LIKE  "%'.$name.'%"';
+        if($name){
+            $sql.=  ' WHERE name LIKE  "%'.$name.'%"';
+        }
     $sql.=  ' ORDER BY created_at DESC';
-    }
     $contacts = $conn->fetch($sql);
     // var_dump($memo);
 
@@ -31,15 +30,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>2018/04/09の課題</title>
-
+    <meta charset="utf-8">
+    <title>2018/04/09の課題</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <link rel="stylesheet" href="./assets/css/app.css">
     <script type="text/javascript" src="./assets/js/app.js"></script>
 </head>
@@ -58,7 +54,6 @@
             </div>
         </div>
 　　</form>
-
 
     <div class="container">
         <div class="row">
@@ -88,14 +83,12 @@
                                     <input type="hidden" name="id" value= <?php echo $val['id']; ?> >
                                     </form>
                                     </td>';
-                                    <?php
-                                    echo'</tr>';
+                                    <?php echo'</tr>';
                             }
-                        ?>
+                                    ?>
                 </table>
             </div>
         </div>
     </div>
-
 </body>
 </html>

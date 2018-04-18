@@ -25,7 +25,7 @@ if($Question>=10){
 };
 
 echo '問題3'.'<br>';
-if(is_numeric($Question)==false || $Question==null){
+if($Question<1){
     echo "無効の値です";
 }else if($Question>=10){
     echo '10以上の値です'.'<br>';

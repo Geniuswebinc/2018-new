@@ -2,18 +2,20 @@
     require_once dirname(__FILE__) .'/data/require.php';
     $conn = new DbConn();
 
-    $sql = 'UPDATE contacts';
-    if($_POST['note']){
-        $id=$_POST['id'];
-        $note=$_POST['note'];
+    $id=$_POST['id'];
+    $note=$_POST['note'];
+    $search=$_POST['search'];
+
+
+    if($note){
+        $sql = 'UPDATE contacts';
         $sql .= '   SET note="'.$note.'"';
         $sql .= '   WHERE id="'.$id.'"';
      }
     $conn->execute($sql);
 
     $sql  = 'SELECT * FROM contacts';
-    if($_POST['search']){
-        $search=$_POST['search'];
+    if($search){
         $sql .= '   WHERE name LIKE "%'.$search.'%"';
     }
     $sql .= '   ORDER BY created_at desc;';

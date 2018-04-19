@@ -37,6 +37,7 @@
                 <div class="col-xs-offset-1 col-xs-10">
                     <label class="control-label">メールアドレス</label>
                     <p class="form-control-static"><?php echo $email; ?></p>
+                    <input type="hidden" name="email" value="<?php echo $email; ?>">
                 </div>
             </div>
 
@@ -44,6 +45,7 @@
                 <div class="col-xs-offset-1 col-xs-10">
                     <label class="control-label">内容</label>
                     <p class="form-control-static"><?php echo $content; ?></p>
+                    <input type="hidden" name="content" value="<?php echo $content; ?>">
                 </div>
             </div>
 

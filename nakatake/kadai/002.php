@@ -48,14 +48,16 @@
             <table class="table">
                 <tbody>
                     <?php
-                        echo '<tr>';
                         for ($i = 1; $i <= 35; $i++) {
-                            if ($i <= 30 ) {
+                            if ($i % 7 == 1) {
+                                echo '<tr>';
+                            }
+                            if ($i <= 30) {
                                 echo '<td>'.$i.'</td>';
                             } elseif ($i > 30) {
                                 echo '<td></td>';
                             }
-                            if ($i % 7==0) {
+                            if ($i % 7 == 0) {
                                 echo '</tr>';
                             }
                         }

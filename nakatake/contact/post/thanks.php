@@ -1,6 +1,19 @@
-<!-- 内容を取得 -->
 <?php
+    require_once dirname(__FILE__) .'/data/require.php';
+    // データベース接続のクラス
+    $conn = new DbConn();
+
+    // 内容を取得
     $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $context = $_POST['context'];
+
+    $sql  = 'INSERT INTO ';
+    $sql .= '    contacts (name, mail, content)';
+    $sql .= '  VALUES ( ';
+    $sql .= '   "'.$name.'", "'.$mail.'", "'.$context.'" ';
+    $sql .= '  )';
+    $conn->fetch($sql);
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +31,8 @@
         <h1>お問い合わせ　完了</h1>
 
         <p><?php echo $name;?>さん、お問い合わせありがとうございました。</p>
+        <p><?php echo $mail;?></p>
+        <p><?php echo $context;?></p>
 
         <a href="index.php" class="btn btn-default">TOPに戻る</a>
     </section>

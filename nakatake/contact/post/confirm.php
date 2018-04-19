@@ -40,6 +40,8 @@
                 <button type="submit" name="submit" class="btn btn-success">送信</button>
 
                 <input name="name" type="hidden" value="<?php echo $name; ?>">
+                <input name="mail" type="hidden" value="<?php echo $mail; ?>">
+                <input name="context" type="hidden" value="<?php echo $context; ?>">
             </div>
         </form>
 

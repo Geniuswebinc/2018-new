@@ -51,19 +51,20 @@
             <table class="table">
         <?php
             for ($i = 1; $i <= 30; $i++){
-                if ($i % 7 == 1 ) {
+                if( $i % 7 == 1 ){
                     echo '<tr>';
                 }
-                echo "<td>".$i."</td>";
+                echo '<td>'.$i.'</td>';
                 if( $i % 7 == 0 ){
+                    echo '</tr>';
                 }
             }
             for ($j = $i % 7 ; $j <= 7; $j++){
                 echo '<td></td>';
                 if ($j % 7 == 0 ) {
+                    echo '</tr>';
                 }
             }
-            echo '</tr>';
         ?>
             </table>
         </div>

@@ -16,14 +16,12 @@
             <table class="table">
                 <tbody>
                     <?php
-                        for ($i = 1; $i <= 100; $i++) {
-                            if ($i % 10 == 1) {
-                                echo '<tr>';
+                        for ($i = 1; $i <= 10; $i++) {
+                            echo '<tr>';
+                            for ($j = 1; $j <= 10; $j++) {
+                                echo '<td>'.$i * $j.'</td>';
                             }
-                            echo '<td>'.$i.'</td>';
-                            if ($i % 10 == 0) {
-                                echo '</tr>';
-                            }
+                            echo '</tr>';
                         }
                     ?>
                 </tbody>

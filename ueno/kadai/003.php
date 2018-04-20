@@ -15,29 +15,25 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
+
                 <table class="table">
                     <?php
                     $ans=0;
-                    for($ans=0;$ans<=100;$ans++){
-                        for($a = 1; $a <=11; $a++){//縦の軸
-                            echo '<tr>';
-                            for($i = 1; $i <= 11; $i++){//横軸
-                                $ans=$a*$i;
-                                if($a==11 || $i==11){
-                                    echo '<td></td>';
-                                }else{
-                                    echo '<td>'.$ans.'</td>';
-                                }
-
+                    for($a = 1; $a <=10; $a++){//縦軸
+                        echo '<tr>';
+                        for($i = 1; $i <= 10; $i++){//横軸
+                            $ans=$a*$i;
+                            if($ans<=100){
+                                echo '<td>'.$ans.'</td>';
+                            }else{
+                                echo "<td></td>"; //数値が出力されていなくても線を描画する
                             }
                         }
-
+                        echo '</tr>';
                     }
-                    echo '</tr>';
+
                     ?>
                 </table>
             </div>
         </div>
     </div>
-</body>
-</html>

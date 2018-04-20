@@ -10,9 +10,6 @@ if($memo){
     $sql = 'UPDATE contacts';
     $sql.= ' WHERE id = '.$id.'';
     $sql.= ' SET note = "'.$memo.'"';
-    //var_dump("update入ってます");
-    //var_dump($id);
-
 }
 $id = $conn->execute($sql);
 //var_dump($sql);

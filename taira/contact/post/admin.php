@@ -69,7 +69,7 @@ $contacts = $conn->fetch($sql);
                             <th>登録日</th>
                             <th>メモ</th>
                         </tr>
-                    </head>
+                    </thead>
                     <tbody>
                         <?php
                         foreach($contacts as $val){

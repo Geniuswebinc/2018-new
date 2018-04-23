@@ -29,9 +29,9 @@ if($Question>=10){
     echo "10以上の値です";
 }else if($Question<10 && $Question>=1){
     echo '9以下の値です'.'<br>';
-}else if($Question<1){
+}else{
     echo '無効の値です'.'<br>';
-};
+}
 ?>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

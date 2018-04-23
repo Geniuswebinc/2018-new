@@ -13,6 +13,7 @@
     $box5 = $_GET['box5'];
     $box6 = $_GET['box6'];
     $arr = $box1 + $box2 + $box3 + $box4 + $box5 + $box6;
+    var_dump($box1);
 ?>
 
 <!DOCTYPE html>

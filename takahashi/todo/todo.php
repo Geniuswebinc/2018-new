@@ -11,7 +11,7 @@
     $conn->fetch($sql);
 
     $sql  = 'SELECT priority_number,contents FROM tasks';
-    $sql .= '   WHERE()';
+    $sql .= '   ORDER BY created_at desc;';
     $contacts = $conn->fetch($sql);
 
    var_dump($contacts);
@@ -50,44 +50,28 @@
 
         <div class="row select-tub">
             <div class="col-xs-12">
-                <form action="" method="post">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="todo.php">未完了</a></li>
-                        <li role="presentation"><a href="complete.php">未完了</a></li>
-                    </ul>
-                </form>
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="todo.php">未完了</a></li>
+                    <li role="presentation"><a href="complete.php">未完了</a></li>
+                </ul>
             </div>
         </div>
 
         <div class="row list">
             <div class="col-xs-12">
                 <table width="500" height="100">
-                    <tr>
-                        <?php foreach($tasks as $task){
+                    <?php foreach($ as $val){
                         echo '<tr>';
-                        echo '    <td>'.$task['priority'].'</td>';
-                        echo '    <td>'.$task['contents'].'</td>';
-                        echo '    <td><button type="button">完了</button></td>';
+                        echo '    <td>'.$val['priority'].'</td>';
+                        echo '    <td>'.$val['contents'].'</td>';
+                        echo '    <td>';
                         echo '</tr>';
-                    }?>
-                    </tr>
+                    } ?>
 
                     <tr>
-                        <td>＜低＞</td>
-                        <td>あさごはん</td>
-                        <td><button type="button">完了</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>＜低＞</td>
-                        <td>あさごはん</td>
-                        <td><button type="button">完了</button></td>
-                    </tr>
-
-                    <tr>
-                        <td>＜低＞</td>
-                        <td>あさごはん</td>
-                        <td><button type="button">完了</button></td>
+                        <td>優先度</td>
+                        <td>内容</td>
+                        <td><form method="get"><button type="submit" value="2" name="state">完了</button></form></td>
                     </tr>
                 </table>
             </div>

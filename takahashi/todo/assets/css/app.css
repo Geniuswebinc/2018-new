@@ -1,0 +1,17 @@
+.header h1{
+    margin:40px 0px 30px;
+}
+
+.btn.btn-input{
+    height:34px;
+    width:70px;
+}
+
+.select-tub{
+    margin:30px 0px 20px;
+}
+
+.select-tub button{
+    border:none;
+    background-color: white;
+}

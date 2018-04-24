@@ -87,7 +87,7 @@ $tasks_complete = $conn->fetch($sql3);
                     </select>
                 </div>
                 <div class="col-xs-4">
-                    <input type="submit" value="登録" id="btnSubmit">
+                    <input type="submit" value="登録" class="btn btn-default" id="btnSubmit">
                 </div>
             </form>
         </div>
@@ -96,7 +96,7 @@ $tasks_complete = $conn->fetch($sql3);
             <div class="col-xs-12">
                 <ul class="nav nav-tabs">
                     <li class="active"><a href="#A" data-toggle="tab" id="tabA">未完了</a></li>
-                    <li><a href="#B" data-toggle="tab" id="tabB">未完了</a></li>
+                    <li><a href="#B" data-toggle="tab" id="tabB">完了</a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -147,6 +147,7 @@ $tasks_complete = $conn->fetch($sql3);
     </div>
 </div>
 
+<script type="text/javascript" src="./assets/js/common.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

@@ -1,0 +1,15 @@
+td{
+    font-size: 16px;
+}
+.table>tbody>tr>td{
+    vertical-align: middle;
+}
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+}

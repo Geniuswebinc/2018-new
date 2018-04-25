@@ -37,7 +37,7 @@ $sql .= ' ORDER BY numbers';
 $priorities = $conn->fetch($sql);
 
 
-$sql  = 'SELECT t.*, p.name FROM todo_lists t';
+$sql  = 'SELECT t.*, p.name, p.colors FROM todo_lists t';
 $sql .= ' LEFT OUTER JOIN priorities p';
 $sql .= ' ON t.priority = p.id';
 // 未完了用
@@ -57,11 +57,11 @@ $tasks_complete = $conn->fetch($sql3);
 <html lang="ja">
 <head>
     <title>ToDoリスト</title>
-    <link href="./assets/css/style.css" rel="stylesheet" media="all">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
@@ -106,12 +106,15 @@ $tasks_complete = $conn->fetch($sql3);
                             foreach ($tasks_nocomplate as $task) {
                                 ?>
                                 <tr>
-                                    <?php echo '<td>'.$task['id'].'</td>'; ?>
-                                    <?php echo '<td>'.$task['name'].'</td>'; ?>
-                                    <?php echo '<td>'.$task['task_name'].'</td>'; ?>
+                                    <?php
+                                        echo '<td><div class="circle"';
+                                        echo ' style="background-color:'.$task['colors'].';">';
+                                        echo '<p>'.$task['name'].'</p></div></td>';
+                                        echo '<td>'.$task['task_name'].'</td>';
+                                    ?>
                                     <td>
                                         <form method="post">
-                                            <input type="submit" value="完了">
+                                            <input type="submit" value="完了" class="btn btn-primary">
                                             <input type="hidden" name="nocomplete_id" value="<?php echo $task['id']; ?>">
                                         </form>
                                     </td>
@@ -122,16 +125,15 @@ $tasks_complete = $conn->fetch($sql3);
                         </table>
                     </div>
                     <div class="tab-pane" id="B">
-                        <table class="table text-center">
+                        <table class="table">
                             <?php
                             foreach ($tasks_complete as $task2) {
                                 ?>
                                 <tr>
-                                    <?php echo '<td>'.$task2['id'].'</td>'; ?>
-                                    <?php echo '<td>'.$task2['task_name'].'</td>'; ?>
-                                    <td>
-                                        <form method="post">
-                                            <input type="submit" value="削除">
+                                    <?php echo '<td class="text-left">'.$task2['task_name'].'</td>'; ?>
+                                    <td class="text-center">
+                                        <form method="post" onsubmit="return deletedChk()">
+                                            <input type="submit" value="削除" class="btn btn-danger">
                                             <input type="hidden" name="complete_id" value="<?php echo $task2['id']; ?>">
                                         </form>
                                     </td>

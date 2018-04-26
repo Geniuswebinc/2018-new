@@ -41,7 +41,7 @@
                 <div class="col-xs-offset-4 col-xs-4">
                     <div class="form-group">
                         <label for="InputTextarea">内容</label>
-                        <textarea class="form-control" name="sentmsg"></textarea>
+                        <textarea class="form-control" name="sentcontent"></textarea>
 	                </div>
                 </div>
             </div>

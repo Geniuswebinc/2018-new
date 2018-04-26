@@ -29,6 +29,7 @@
 }
 
 .backbtn{
+  display:inline-block;
   margin:5px;
   color:white;
   border-style: none;
@@ -37,13 +38,13 @@
 }
 
 .sentbtn{
+  display:inline-block;
   margin:130px 5px;
   color:white;
   border-style: none;
   background-color:#73B87B;
   padding:5px 30px;
 }
-
 
 .thanxsMsg{
   margin:50px 0px 150px;

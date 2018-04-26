@@ -1,5 +1,21 @@
 <?php
+    require_once dirname(__FILE__) .'/data/require.php';
+
+
+    // データベース接続のクラス
+    $conn = new DbConn();
+
     $name=$_POST['sentname'];
+    $mail=$_POST['sentmail'];
+    $content=$_POST['sentcontent'];
+
+    $sql  = 'INSERT INTO ';
+    $sql .= '    contacts (name, mail, content)';
+    $sql .= '  VALUES ( ';
+    $sql .= '   "'.$name.'", "'.$mail.'", "'.$content.'" ';
+    $sql .= '  )';
+    // var_dump($sql);
+    $conn->fetch($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,6 +44,8 @@
         <div class="row">
             <div class="col-xs-12 text-center thanxsMsg">
                 <p><?php echo $name."様、お問い合わせありがとうございました。";?></p>
+                <p><?php echo $mail; ?></p>
+                <p><?php echo $content; ?></p>
             </div>
         </div>
 

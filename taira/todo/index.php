@@ -7,25 +7,36 @@ $id = $_POST['id'];
 $delete = $_POST['delete'];
 // データベース接続のクラス
 $conn = new DbConn();
+//ToDoリストの新規タスクの追加
 if($contents){
     $sql  = 'INSERT INTO';
     $sql .= '    tasks (priority_id,contents)';
     $sql .= '  VALUES ( ';
     $sql .= '   '.$priority_id.', "'.$contents.'"';
     $sql .= '  )';
+    $conn->fetch($sql);
 }
-$conn->fetch($sql);
+//未完了タスクを完了タスクに変更
 if($complete){
     $sql  = 'UPDATE todo_taira_db . tasks';
     $sql .= '   SET complete  = '.$complete.',updated_at  = NOW()';
     $sql .= '   WHERE id = '.$id.'';
     $conn->execute($sql);
 }
+//完了タスクの削除
 if($delete){
     $sql  = 'DELETE FROM tasks';
     $sql .= '   WHERE id = '.$id.'';
     $conn->execute($sql);
 }
+//未完了タスクを取得
+$sql  = 'SELECT tasks.id,contents,priority_id,name,colors FROM tasks';
+$sql .= '   INNER JOIN priorities';
+$sql .= '   ON tasks.priority_id = priorities.id';
+$sql .= '   WHERE complete = 0 ';
+$sql .= '   ORDER BY tasks.created_at DESC';
+$tasks_priority= $conn->fetch($sql);
+//完了タスクを取得
 $sql  = 'SELECT tasks.id,contents,priority_id,name,colors FROM tasks';
 $sql .= '   INNER JOIN priorities';
 $sql .= '   ON tasks.priority_id = priorities.id';
@@ -33,12 +44,6 @@ $sql .= '   WHERE complete = 1 ';
 $sql .= '   ORDER BY tasks.created_at DESC';
 $complete_tasks= $conn->fetch($sql);
 
-$sql  = 'SELECT tasks.id,contents,priority_id,name,colors FROM tasks';
-$sql .= '   INNER JOIN priorities';
-$sql .= '   ON tasks.priority_id = priorities.id';
-$sql .= '   WHERE complete = 0 ';
-$sql .= '   ORDER BY tasks.created_at DESC';
-$tasks_priority= $conn->fetch($sql);
 //値の入った配列や変数の中身を表示
 //var_dump($);
 ?>
@@ -79,7 +84,6 @@ $tasks_priority= $conn->fetch($sql);
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-xs-12">
                 <ul class="nav nav-tabs">

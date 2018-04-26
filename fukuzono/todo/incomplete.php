@@ -25,8 +25,14 @@
         $sql .= '   "'.$content.'", "'.$priority.'","'.$status.'" ';
         $sql .= '  )';
 
+        header('Location: http://192.168.33.10/todo/incomplete.php');
+
         // var_dump($sql);
     }
+
+
+
+
 
     $conn->fetch($sql);
 

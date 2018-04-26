@@ -1,0 +1,25 @@
+.header h1{
+    margin:40px 0px 30px;
+}
+
+.btn{
+    height:34px;
+    width:70px;
+}
+
+.btn.btn-input{
+    background-color:#EDD8FE;
+}
+
+.select-tub{
+
+    margin:30px 0px 20px;
+}
+
+.row list button{
+    border:none;
+}
+
+.btn.btn-update{
+    background-color:#D9F4FC;
+}

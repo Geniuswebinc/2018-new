@@ -36,12 +36,13 @@
             <tr>
                 <?php
                 for($i = 1;$i <= 35;$i++){
-                    if(($i % 7) != 0 && $i <= 30){
-                        echo '<td>'.$i.'</td>';
-                    }else if(($i % 7) == 0){
-                        echo '</tr>'.'<tr>';
-                    }else if($i>=30){
+                    if($i>30){
                         echo '<td>'.'</td>';
+                    }else if(($i % 7) == 0 && $i != 35){
+                        echo '<td>'.$i.'</td>';
+                        echo '</tr>'.'<tr>';
+                    }else if($i <= 30){
+                        echo '<td>'.$i.'</td>';
                     }
                 }
                 ?>

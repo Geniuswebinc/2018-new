@@ -5,6 +5,8 @@ $conn = new DbConn();
 
 $name = $_POST['taskdata'];
 $priority = $_POST['priority'];
+$nocomplete_id = $_POST['nocomplete_id'];
+$complete_id = $_POST['complete_id'];
 
 if ($name) {
     $sql = 'INSERT INTO';
@@ -13,18 +15,20 @@ if ($name) {
     $sql .= ' "'.$name.'", "'.$priority.'"';
     $sql .= ' )';
     $conn->fetch($sql);
+
+    $url = 'index.php';
+    header('Location:' . $url, true, 301);
+    exit;
 }
 
-if ($_POST['nocomplete_id']) {
-    $nocomplete_id = $_POST['nocomplete_id'];
+if ($nocomplete_id) {
     $sql = 'UPDATE todo_lists';
     $sql .= ' SET states = 2, updated_at = CURRENT_TIMESTAMP';
     $sql .= ' WHERE id = '.$nocomplete_id;
     $conn->execute($sql);
 }
 
-if ($_POST['complete_id']) {
-    $complete_id = $_POST['complete_id'];
+if ($complete_id) {
     $sql = 'UPDATE todo_lists';
     $sql .= ' SET delete_flag = 1';
     $sql .= ' WHERE id = '.$complete_id;
@@ -62,7 +66,6 @@ $tasks_complete = $conn->fetch($sql3);
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -107,10 +110,10 @@ $tasks_complete = $conn->fetch($sql3);
                                 ?>
                                 <tr>
                                     <?php
-                                        echo '<td><div class="circle"';
-                                        echo ' style="background-color:'.$task['colors'].';">';
-                                        echo '<p>'.$task['name'].'</p></div></td>';
-                                        echo '<td>'.$task['task_name'].'</td>';
+                                    echo '<td><div class="circle"';
+                                    echo ' style="background-color:'.$task['colors'].';">';
+                                    echo '<p>'.$task['name'].'</p></div></td>';
+                                    echo '<td>'.$task['task_name'].'</td>';
                                     ?>
                                     <td>
                                         <form method="post">
@@ -149,6 +152,7 @@ $tasks_complete = $conn->fetch($sql3);
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="./assets/js/common.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

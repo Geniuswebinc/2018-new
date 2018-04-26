@@ -12,7 +12,7 @@ if($contents){
     $sql  = 'INSERT INTO tasks(contents,priority_number)';
     $sql .= '   VALUES("'.$contents.'",'.$priority_number.')';
 }
-$conn->fetch($sql);
+
 
 if($state==2){
     $sql = 'UPDATE tasks';

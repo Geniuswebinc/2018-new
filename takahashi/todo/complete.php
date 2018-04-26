@@ -3,16 +3,15 @@
 
     $conn = new DbConn();
 
-    $contents=$_GET['contents'];
-    $priority_number=$_GET['priority_number'];
+    $sql  = 'SELECT * FROM tasks';
+    $sql .= '   LEFT OUTER JOIN priorities';
+    $sql .= '   ON  tasks.priority_number=priorities.id';
+    $sql .= '   WHERE state=2';
+    $sql .= '   ORDER BY update_at desc;';
 
-    $sql  = 'UPDATE';
-    $sql .= '   SET ';
-    $sql .= '   WHERE ';
+    $tasks = $conn->fetch($sql);
 
-   $contacts = $conn->fetch($sql);
-   var_dump($contacts);
-   var_dump($sql);
+    //var_dump($sql);
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,7 +39,7 @@
                         <option selected value="2">中</option>
                         <option value="3">低</option>
                     </select>
-                    <input type="submit" value="登録" class="btn btn-input">
+                    <input type="submit" value="登録" class="btn btn-input" disabled="disabled">
                 </form>
             </div>
         </div>
@@ -50,7 +49,7 @@
                 <form action="" method="post">
                     <ul class="nav nav-tabs">
                         <li role="presentation"><a href="todo.php">未完了</a></li>
-                        <li class="active"><a href="complete.php">未完了</a></li>
+                        <li class="active"><a href="complete.php">完了</a></li>
                     </ul>
                 </form>
             </div>
@@ -59,18 +58,16 @@
         <div class="row list">
             <div class="col-xs-12">
                 <table>
-                    <?php foreach($tasks as $val){
-                        echo '<tr>';
-                        echo '    <td>'.$val['priority'].'</td>';
-                        echo '    <td>'.$val['contents'].'</td>';
-                        echo '    <td>';
-                        echo '</tr>';
-                    }?>
+                    <?php foreach($tasks as $val){ ?>
+                        <tr>
+                            <td width="50" height="60" class="text-center"><?php echo $val['name']; ?></td>
+                            <td width="200" height="60" class="text-center"><?php echo $val['contents']; ?></td>
+                        </tr>
+                    <?php } ?>
                 </table>
             </div>
         </div>
     </div>
-
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

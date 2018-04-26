@@ -1,6 +1,5 @@
 <?php
 require_once dirname(__FILE__) .'/data/require.php';
-
 $contents = $_POST['contents'];
 $priority_id = $_POST['priority'];
 $complete = $_POST['complete'];
@@ -27,7 +26,7 @@ if($delete){
     $sql .= '   WHERE id = '.$id.'';
     $conn->execute($sql);
 }
-$sql  = 'SELECT tasks.id,contents,priority_id,name FROM tasks';
+$sql  = 'SELECT tasks.id,contents,priority_id,name,colors FROM tasks';
 $sql .= '   INNER JOIN priorities';
 $sql .= '   ON tasks.priority_id = priorities.id';
 $sql .= '   WHERE complete = 1 ';
@@ -40,7 +39,6 @@ $sql .= '   ON tasks.priority_id = priorities.id';
 $sql .= '   WHERE complete = 0 ';
 $sql .= '   ORDER BY tasks.created_at DESC';
 $tasks_priority= $conn->fetch($sql);
-
 //値の入った配列や変数の中身を表示
 //var_dump($);
 ?>
@@ -106,7 +104,7 @@ $tasks_priority= $conn->fetch($sql);
                                     <form action="index.php" method="post" onsubmit="return submitChk()">
                                         <input type="submit" value="完了">
                                         <input type="hidden" name="complete" value="1">
-                                        <input type="hidden" name="id" value="<?php echo $val['id']; ?>">
+                                        <input type="hidden" name="id" value="<?php echo $val['id']; ?>" class="btn btn-default">
                                     </form>
                                     <?php
                                     echo '    </td>';
@@ -117,19 +115,19 @@ $tasks_priority= $conn->fetch($sql);
                         </table>
                     </div>
                     <div class="tab-pane" id="tab2">
-                        <table  class="table">
+                        <table  class="table text-center">
                             <tbody>
                                 <?php
                                 foreach($complete_tasks as $val) {
                                     echo '<tr>';
-                                    echo '    <td style="color:'.$val['colors'].';" class="circle">'.$val['name'].'</td>';
+                                    echo '    <td><div style="background-color:'.$val['colors'].';" class="circle">'.$val['name'].'</div></td>';
                                     echo '    <td>'.$val['contents'].'</td>';
                                     echo '<td>';
                                     ?>
                                     <form action="index.php" method="post" onsubmit="return submitChk()">
                                         <input type="submit" value="削除">
                                         <input type="hidden" name="delete" value="1">
-                                        <input type="hidden" name="id" value="<?php echo $val['id']; ?>">
+                                        <input type="hidden" name="id" value="<?php echo $val['id']; ?>" class="btn btn-default">
                                     </form>
                                     <?php
                                     echo '</td>';
@@ -142,7 +140,6 @@ $tasks_priority= $conn->fetch($sql);
                 </div>
             </div>
         </div>
-
     </div>
     <script type='text/javascript' src="./assets/js/app.js"></script>
     <!-- Latest compiled and minified JavaScript -->

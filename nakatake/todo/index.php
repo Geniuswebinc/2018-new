@@ -17,7 +17,7 @@ if ($name) {
     $conn->fetch($sql);
 
     $url = 'index.php';
-    header('Location:' . $url, true, 301);
+    header('Location:' . $url);
     exit;
 }
 

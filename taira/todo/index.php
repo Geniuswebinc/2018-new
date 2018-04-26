@@ -41,7 +41,7 @@ $sql  = 'SELECT tasks.id,contents,priority_id,name,colors FROM tasks';
 $sql .= '   INNER JOIN priorities';
 $sql .= '   ON tasks.priority_id = priorities.id';
 $sql .= '   WHERE complete = 1 ';
-$sql .= '   ORDER BY tasks.created_at DESC';
+$sql .= '   ORDER BY tasks.updated_at DESC';
 $complete_tasks= $conn->fetch($sql);
 
 //値の入った配列や変数の中身を表示

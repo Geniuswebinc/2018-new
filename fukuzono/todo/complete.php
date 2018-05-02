@@ -36,7 +36,7 @@
     $sql .= ' ON tasks.priority = priorities.id';
     $sql .= ' WHERE status = "2" ';
     $sql .= ' AND deleteflag = "0" ';
-    $sql .= ' ORDER BY create_at DESC';
+    $sql .= ' ORDER BY update_at DESC';
 
 // var_dump($sql);
     $tasks = $conn->fetch($sql);

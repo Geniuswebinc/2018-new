@@ -12,7 +12,7 @@
 
 
     $sql .= ' UPDATE tasks';
-    $sql .= ' SET status = "'.$complete.'"';
+    $sql .= ' SET status = "'.$complete.'",update_at=CURRENT_TIMESTAMP';
     $sql .= ' WHERE tasks_id = "'.$tasks_id.'"';
     $conn->execute($sql);
         // var_dump($sql);

@@ -66,7 +66,7 @@
                             }
                         ?>
                     </select>
-                    <a href="#stage"><input type="submit" value="送信" class="form-control"></a>
+                    <input type="submit" value="送信" class="form-control">
                 </form>
                 <table class="table">
                     <tr>
